@@ -540,7 +540,7 @@ public class ConfirmationOfOrderActivity extends BaseActivity implements View.On
                     }
                 });
     }
-
+    /*请求订单详情 根据接口设置卡券的数据*/
     private void setCouponResult(OrderDetailBean.DataBean dataBean) {
         if (dataBean != null) {
             switch (dataBean.getCarProduct().getCarType()) {
