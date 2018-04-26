@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/ll_main"
+    tools:context="com.soowin.staremblem.ui.index.activity.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/fl_main"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/me_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_index"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@null"
+            android:drawableTop="@drawable/selector_rb_index"
+            android:gravity="center"
+            android:text="出行"
+            android:textColor="@drawable/selector_color_theme_gray"
+            android:textSize="@dimen/font_small" />
+
+        <TextView
+            android:id="@+id/tv_phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/img_nav_n_02"
+            android:gravity="center"
+            android:text="客服"
+            android:textColor="@color/font_hint"
+            android:textSize="@dimen/font_small" />
+
+        <RadioButton
+            android:id="@+id/rb_me"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@null"
+            android:drawableTop="@drawable/selector_rb_me"
+            android:gravity="center"
+            android:text="我的"
+            android:textColor="@drawable/selector_color_theme_gray"
+            android:textSize="@dimen/font_small" />
+    </RadioGroup>
+</LinearLayout>

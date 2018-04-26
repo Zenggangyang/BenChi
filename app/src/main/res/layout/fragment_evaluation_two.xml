@@ -1,0 +1,151 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/index_bg"
+    tools:context="com.soowin.staremblem.ui.index.fragment.EvaluationTwoFragment">
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/space">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_buy_service_start"
+            android:textSize="@dimen/space_big_30" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_pad2" />
+
+        <LinearLayout
+            android:id="@+id/ll_choose1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_small"
+            android:layout_marginRight="@dimen/space_small"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/space_small"
+                android:layout_weight="1"
+                android:background="@drawable/selector_cb_theme"
+                android:button="@null"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/space"
+                android:text="@string/app_buy_service_choose_item1"
+                android:textColor="@drawable/selector_color_theme_white" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_choose2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_small"
+            android:layout_marginRight="@dimen/space_small"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/space_small"
+                android:layout_weight="1"
+                android:background="@drawable/selector_cb_theme"
+                android:button="@null"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/space"
+                android:text="@string/app_buy_service_choose_item2"
+                android:textColor="@drawable/selector_color_theme_white" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_choose3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_small"
+            android:layout_marginRight="@dimen/space_small"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/space_small"
+                android:layout_weight="1"
+                android:background="@drawable/selector_cb_theme"
+                android:button="@null"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/space"
+                android:text="@string/app_buy_service_choose_item3"
+                android:textColor="@drawable/selector_color_theme_white" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_choose4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_small"
+            android:layout_marginRight="@dimen/space_small"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/space_small"
+                android:layout_weight="1"
+                android:background="@drawable/selector_cb_theme"
+                android:button="@null"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/space"
+                android:text="@string/app_buy_service_choose_item4"
+                android:textColor="@drawable/selector_color_theme_white" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_pad1" />
+
+        <EditText
+            android:id="@+id/et_login_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space_small"
+            android:layout_marginLeft="@dimen/space"
+            android:layout_marginRight="@dimen/space"
+            android:background="@drawable/shape_gray_noradius"
+            android:hint="@string/app_satisfactions_other_want_to_say"
+            android:padding="@dimen/space"
+            android:textColor="@color/theme_color"
+            android:textColorHint="@color/gray"
+            android:textSize="@dimen/font_14" />
+
+        <TextView
+            android:id="@+id/btn_buy_service_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_big_40"
+            android:layout_marginRight="@dimen/space_big_40"
+            android:layout_marginTop="@dimen/space_small"
+            android:background="@drawable/shape_theme_corners_30"
+            android:gravity="center"
+            android:padding="@dimen/space"
+            android:text="@string/app_buy_service_choose_next"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_15" />
+
+    </LinearLayout>-->
+
+</LinearLayout>

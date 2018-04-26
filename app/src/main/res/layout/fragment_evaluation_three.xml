@@ -1,0 +1,17 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/index_bg"
+    tools:context="com.soowin.staremblem.ui.index.fragment.EvaluationThreeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+  <!--  <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textColor="@color/font_title"
+        android:textSize="@dimen/font_16"
+        android:text="@string/app_buy_service_submit_success" />-->
+
+</FrameLayout>

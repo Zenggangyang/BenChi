@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:orientation="vertical"
+        android:background="@color/transparent_20"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="533">
+
+    </LinearLayout>
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        android:background="@color/transparent_20"
+        android:orientation="horizontal"
+
+        android:layout_weight="200">
+        <LinearLayout
+            android:background="@color/white"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="33">
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="416">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/white"
+                android:layout_weight="33"/>
+            <TextView
+
+                android:id="@+id/tv_wechat_pay"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="54"
+
+                android:background="@drawable/shape_theme_stroke_three_solid"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/app_order_wechat_pay"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/white"
+                android:layout_weight="18"/>
+            <TextView
+                android:id="@+id/tv_balance_pay"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="54"
+                android:background="@drawable/shape_theme_stroke_three_solid"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/app_order_balance_pay"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/white"
+                android:layout_weight="33"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:background="@color/white"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="31">
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

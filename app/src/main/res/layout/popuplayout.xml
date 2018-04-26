@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/space_big_20"
+    android:gravity="center"
+    android:id="@+id/ll_pop_outside"
+    android:background="@color/translucent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_pop_inside"
+        android:background="@drawable/shape_white_five_corners"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_margin="@dimen/space"
+            android:id="@+id/iv_pop_close"
+            android:layout_width="@dimen/space_big_40"
+            android:layout_height="@dimen/space_big_40"
+            android:layout_gravity="right"
+            android:adjustViewBounds="true"
+            android:src="@drawable/img_icon_close" />
+
+        <TextView
+            android:padding="@dimen/space"
+            android:textSize="@dimen/font_13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_transfer_form_remarks"
+            android:textColor="@color/font_text" />
+
+        <com.soowin.staremblem.utils.myView.MyGridView
+            android:layout_margin="@dimen/space"
+            android:id="@+id/gv_pop_remark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="2">
+
+        </com.soowin.staremblem.utils.myView.MyGridView>
+
+        <TextView
+            android:layout_marginLeft="@dimen/space"
+            android:layout_marginRight="@dimen/space"
+            android:layout_marginTop="@dimen/space"
+            android:layout_marginBottom="@dimen/space_big_15"
+
+            android:padding="@dimen/space"
+            android:textSize="@dimen/font_13"
+            android:textColor="@color/theme_color"
+            android:background="@drawable/shape_theme_noradius"
+            android:id="@+id/tv_pop_sure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/app_address_sure" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

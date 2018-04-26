@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="whitesmoke">#F5F5F5</color><!--烟白色 -->
+    <color name="title_bg">#FCFCFC</color><!--标题背景色-->
+    <color name="black">#000000</color>
+    <color name="coupon">#F7494A</color><!--红色 -->
+    <color name="textColor_goods_name">#848484</color>
+    <color name="fengexian2">#F1F1F1</color>
+    <color name="colorGray6">#ff666666</color>
+    <color name="colorWhite">#ffffffff</color>
+    <color name="selectColor">#F79797</color>
+    <color name="transparent">#00000000</color><!--透明 -->
+    <color name="transparent_5f">#5fffffff</color><!--透明 -->
+    <color name="transparent_20">#2f000000</color><!--透明 -->
+    <color name="transparent_white_20">#4Bffffff</color><!--透明 -->
+    <color name="transparent_theme_color">#99EB2f3B</color><!--主题颜色-->
+    <color name="transparent_white">#00FFFFFF</color><!--主题颜色-->
+
+    <color name="translucent">#8f000000</color><!--半透明 -->
+    <color name="translucent_c">#cf000000</color><!--半透明 -->
+    <color name="white">#ffffff</color><!--白色 -->
+    <color name="comment">#FFEFEF</color><!--白色 -->
+    <color name="green">#3CC55D</color><!--绿色 -->
+    <color name="back_color">#494949</color><!--绿色 -->
+
+    <color name="gray">#808080</color><!--灰色 -->
+    <color name="yellow">#F1CD9A</color><!--灰色 -->
+    <color name="gray_text">#CFCFCF</color><!--灰色 -->
+    <color name="gray_order_text">#737373</color><!--灰色 -->
+    <color name="grey">#C6C6C6</color><!--灰色 -->
+    <color name="groy">#F4F5F7</color><!--灰色 -->
+    <color name="red">#FF0000</color><!--红色 -->
+    <color name="fenred">#FF3354</color><!--红色 -->
+    <color name="clickColor">#F46263</color><!--红色 -->
+    <color name="color_eb303b">#EB303B</color><!--红色 -->
+    <color name="notclickColor">#AEAEAE</color><!--红色 -->
+    <color name="darkorange">#FF8C00</color><!--暗桔黄色 -->
+    <color name="blue">#0000FF</color><!--蓝色 -->
+    <color name="lightgrey">#D3D3D3</color><!--亮灰色 -->
+    <color name="darkgray">#A9A9A9</color><!--暗灰色 -->
+    <color name="frenchgrey">#F5F5F5</color><!--浅灰色 -->
+    <color name="blue_title">#0000ff</color><!--蓝色 -->
+    <color name="lightgray">#D3D3D3</color><!--亮灰色 -->
+    <!--<color name="me_bg">#F0EFF5</color>--><!--亮灰色 -->
+    <color name="order_bg">#F8F8F8</color><!--亮灰色 -->
+    <color name="vip_color">#C4C189</color><!--亮灰色 -->
+    <color name="vip_text_color">#B7E0F3</color><!--亮灰色 -->
+
+    <color name="title_blue">#14A0D5</color><!--标题蓝色-->
+    <color name="login_button_blue">#9DD5EC</color><!--登录按钮蓝色-->
+    <color name="login_text">#C8ECFA</color><!--登录部分字体颜色-->
+    <color name="white_20">#32ffffff</color><!--白色半透明-->
+    <color name="white_50">#7fffffff</color><!--白色半透明-->
+    <color name="radio_not_select">#FEFEFE</color><!--白色半透明-->
+    <color name="pink_green">#95CF85</color><!--粉绿-->
+
+    <!--奔驰项目总结-->
+    <color name="theme_color">#daba6c</color><!--主题颜色-->
+    <color name="font_title">#000000</color><!--标题黑-->
+    <color name="font_text">#4f5457</color><!--正文灰黑-->
+    <color name="font_hint">#adaeaf</color><!--占位符灰-->
+
+    <color name="color_gray">#CACBCD</color><!--取消等灰色部分-->
+    <color name="color_transparent_8f">#8fFFFFFF</color><!--半透明蒙版-->
+
+    <color name="fengexian">#e1e1e1</color><!--分割线-->
+    <color name="fengexian_theme">#eedfbb</color><!--主题色分割线-->
+    <color name="me_bg">#f3f5f7</color><!--背景色 -->
+
+</resources>

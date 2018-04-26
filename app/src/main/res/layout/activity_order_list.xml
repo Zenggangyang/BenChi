@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.soowin.staremblem.ui.index.activity.OrderListActivity">
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/black"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="标题"
+
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_16" />
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingBottom="@dimen/space_big"
+            android:paddingLeft="@dimen/space_small"
+            android:paddingTop="@dimen/space_big"
+            android:src="@drawable/img_go_back"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_popwindow"
+            android:layout_width="15dp"
+            android:layout_marginLeft="@dimen/space"
+            android:layout_height="30dp"
+
+            android:layout_toRightOf="@id/tv_title"
+            android:layout_centerVertical="true"
+            />
+        <!--<TextView-->
+            <!--android:id="@+id/tv_ok"-->
+
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:padding="@dimen/space"-->
+            <!--android:text="完成"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:textSize="@dimen/font_11"-->
+            <!--android:visibility="gone" />-->
+
+         <!--<ImageView-->
+               <!--android:id="@+id/iv_menu"-->
+               <!--android:layout_width="wrap_content"-->
+               <!--android:layout_height="wrap_content"-->
+               <!--android:layout_alignParentEnd="true"-->
+               <!--android:layout_alignParentRight="true"-->
+               <!--android:layout_centerVertical="true"-->
+               <!--android:padding="@dimen/space"-->
+               <!--android:src="@mipmap/ic_launcher"-->
+               <!--android:visibility="visible" />-->
+
+         <!--  <&#45;&#45;<ImageView
+               android:id="@+id/iv_menu1"
+               android:layout_width="45dp"
+               android:layout_height="45dp"
+               android:layout_alignParentEnd="true"
+               android:layout_alignParentRight="true"
+               android:layout_centerVertical="true"
+               android:padding="@dimen/space"
+               android:src="@mipmap/ic_launcher"
+               android:visibility="gone" />&ndash;&gt;-->
+    </RelativeLayout><!--</LinearLayout>-->
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_order_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+</LinearLayout>

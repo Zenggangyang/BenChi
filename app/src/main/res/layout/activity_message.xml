@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/me_bg"
+    android:orientation="vertical"
+    tools:context="com.soowin.staremblem.ui.index.activity.MessageActivity">
+
+    <include layout="@layout/component_black_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space"
+        android:background="@drawable/shape_white_five_corners"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/space_big_20">
+
+            <TextView
+                android:id="@+id/tv_message_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/font_title"
+                android:textSize="@dimen/font_16" />
+
+            <TextView
+                android:id="@+id/tv_message_createtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/space"
+                android:textColor="@color/font_text"
+                android:textSize="@dimen/font_10" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_message_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/space_big_20"
+            android:paddingLeft="@dimen/space_big_15"
+            android:paddingTop="@dimen/space_big_15"
+            android:textSize="@dimen/font_15" />
+
+        <LinearLayout
+            android:id="@+id/ll_message_content"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_fengexian1"
+            android:background="@color/fengexian" />
+
+        <RelativeLayout
+            android:id="@+id/rl_message_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_String_message_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/space_big_15"
+                android:text="@string/app_message_detail2"
+                android:textSize="@dimen/font_12" />
+
+            <ImageView
+                android:id="@+id/iv_right_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:adjustViewBounds="true"
+                android:padding="@dimen/space_big_15"
+                android:src="@drawable/img_right_back" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:gravity="center_vertical"
+    android:paddingRight="@dimen/space"
+    android:layout_height="@dimen/space_big_50">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:background="@drawable/shape_theme_stroke_30"
+        android:text="@string/app_register_sex_man"
+        android:textColor="@color/theme_color"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/space_big_20"
+        android:paddingRight="@dimen/space_big_20"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_big_40" />
+</LinearLayout>

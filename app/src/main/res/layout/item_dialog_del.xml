@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/translucent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_height="120dp"
+        android:background="@drawable/shape_white_five_corners"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:visibility="gone"
+            android:layout_margin="@dimen/space"
+            android:src="@drawable/pop_msg_tip_xs" />
+        <!--<TextView-->
+            <!--android:layout_marginTop="@dimen/space_big_20"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="提示"-->
+            <!--android:textSize="@dimen/font_13"-->
+            <!--android:textColor="@color/black"/>-->
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space"
+            android:layout_marginLeft="@dimen/space_big_30"
+            android:layout_marginRight="@dimen/space_big_30"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="是否要删除选中的卡券？"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/font_13" />
+
+        <View android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/theme_color"/>
+
+        <LinearLayout
+            android:background="@drawable/shape_white_five_corners"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_quxiao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/space_big_15"
+                android:text="取消"
+
+                android:textColor="@color/theme_color"
+                android:textSize="@dimen/font_12" />
+            <!--itemRemark.setBackground(context.getResources().getDrawable(R.drawable.shape_theme_stroke_30));-->
+            <!--itemRemark.setTextColor(context.getResources().getColor(R.color.theme_color));-->
+            <View
+                android:layout_width="@dimen/space_fengexian1"
+                android:layout_height="match_parent"
+                android:background="@color/theme_color" />
+
+            <TextView
+
+                android:id="@+id/tv_queding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/space_big_15"
+                android:text="确定"
+                android:textColor="@color/theme_color"
+                android:textSize="@dimen/font_12" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

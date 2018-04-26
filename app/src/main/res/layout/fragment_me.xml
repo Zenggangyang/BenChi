@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/srl_msrl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!--  <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="这是s我h的" />
+
+         />-->
+        <!-- <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:background="@color/black">
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:gravity="center"
+                 android:padding="@dimen/space"
+                 android:text="@string/app_personal_center"
+                 android:textColor="@color/white"
+                 android:textSize="@dimen/font_smaall_little" />
+         </LinearLayout>-->
+        <include layout="@layout/component_black_title" />
+
+        <LinearLayout
+            android:id="@+id/rl_personal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.6"
+            android:background="@color/black"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.7">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="6.4">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:orientation="horizontal"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:id="@+id/iv_avatar"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/space_big_30"
+                        android:src="@drawable/img_avatar_null" />
+
+                    <TextView
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:id="@+id/iv_me_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:lines="2"
+                        android:ellipsize="end"
+                        android:layout_marginBottom="@dimen/space"
+                        android:layout_marginLeft="@dimen/space_big_20"
+                        android:layout_toRightOf="@id/iv_avatar"
+
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_15" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_yu_e"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_big_15"
+                    android:background="@drawable/shape_balance_corners"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_string_yue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingBottom="8dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="8dp"
+                        android:text="@string/yue"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_12" />
+
+                    <TextView
+                        android:id="@+id/tv_yu_e"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/space_big_20"
+                        android:gravity="center"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_12" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3.6">
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="6.8"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4.1"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_marginTop="@dimen/space"
+                    android:id="@+id/rl_coupon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_string_coupon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/space_big_20"
+                        android:drawableLeft="@drawable/img_me_coupon"
+                        android:drawablePadding="@dimen/space"
+
+                        android:gravity="center"
+                        android:padding="@dimen/space_big_20"
+                        android:text="@string/app_coupon_title"
+                        android:textSize="@dimen/font_13" />
+
+                    <ImageView
+                        android:id="@+id/iv_coupon_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/space_big_20"
+                         />
+
+                    <!--<TextView-->
+                    <!--android:background="@drawable/shape_theme_enable"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_marginRight="@dimen/space"-->
+                    <!--android:layout_toLeftOf="@id/iv_coupon_back"-->
+                    <!--android:text="2" />-->
+                    <TextView
+                        android:id="@+id/tv_bga_daichuli"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/space"
+                        android:layout_marginTop="5dp"
+                        android:layout_toLeftOf="@id/iv_coupon_back"
+                        android:background="@drawable/shape_theme_enable"
+                        android:enabled="true"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_tosmall"
+                        android:visibility="visible" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/fengexian" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_string_mine_order"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/space_big_20"
+                        android:drawableLeft="@drawable/img_icon_order"
+                        android:drawablePadding="@dimen/space"
+                        android:gravity="center"
+
+                        android:padding="@dimen/space_big_20"
+                        android:text="@string/app_personal_center_order"
+                        android:textSize="@dimen/font_13" />
+
+                    <ImageView
+
+                        android:id="@+id/iv_coupon_order_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/space_big_20"
+                      />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/fengexian" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_user_agreement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_string_user_agrement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/space_big_20"
+                        android:drawableLeft="@drawable/img_icon_user_agreement"
+                        android:drawablePadding="@dimen/space"
+                        android:gravity="center"
+                        android:padding="@dimen/space_big_20"
+                        android:text="@string/app_personal_center_user_agreement"
+                        android:textSize="@dimen/font_13" />
+
+                    <ImageView
+
+                        android:id="@+id/iv_user_agreement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/space_big_20"
+                        />
+
+                </RelativeLayout>
+
+                <!-- <View
+                     android:layout_width="match_parent"
+                     android:layout_height="0.5dp"
+                     android:background="@color/gray" />-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.0"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="12">
+
+                    <TextView
+                        android:id="@+id/tv_login_off"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="@dimen/space_big_30"
+                        android:background="@drawable/shape_percenter_loginex"
+                        android:gravity="center"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="15dp"
+                        android:text="@string/app_personal_center_tuichu"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                </LinearLayout>
+            </LinearLayout>
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal">-->
+            <!--<LinearLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="3">-->
+
+            <!--</LinearLayout>-->
+            <!--<LinearLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="50">-->
+
+            <!--</LinearLayout>-->
+            <!--<LinearLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="2">-->
+
+            <!--</LinearLayout>-->
+            <!--</LinearLayout>-->
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

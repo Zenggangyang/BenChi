@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--<TextView-->
+        <!--android:id="@+id/tv_item"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_margin="@dimen/space"-->
+        <!--android:paddingBottom="6dp"-->
+        <!--android:paddingLeft="16dp"-->
+        <!--android:paddingRight="16dp"-->
+        <!--android:paddingTop="6dp"-->
+        <!--android:textColor="@color/font_attr"-->
+        <!--android:background="@drawable/shape_me_bg_corners_10"-->
+        <!--android:text="规格内容"-->
+        <!--android:textSize="@dimen/m_font_text2" />-->
+    <TextView
+        android:id="@+id/tv_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_big"
+        android:background="@drawable/shape_theme_frame_radius"
+        android:paddingBottom="@dimen/space_little_big"
+        android:paddingLeft="@dimen/space_big"
+        android:paddingRight="@dimen/space_big"
+        android:paddingTop="@dimen/space_little_big"
+        android:text="@string/app_transfer_model"
+        android:textColor="@color/theme_color"
+        android:textSize="@dimen/font_15" />
+</LinearLayout>

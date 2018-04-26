@@ -1,0 +1,246 @@
+<resources>
+    <string name="app_name">星徽尊享</string>
+    <!--baseAcitivity-->
+    <string name="app_base_app_expired">强制升级APP版本</string>
+    <string name="app_base_service_error">服务器程序错误</string>
+    <string name="app_base_lack_jurisdiction">用户无权限访问该资源，请求失败</string>
+
+    <string name="app_main_shengji">当前版本已暂停使用，请升级</string>
+    <!--Login  登录-->
+    <string name="app_login_start">星徽尊享，从这里开始</string>
+    <string name="app_login_start_english">DLS,Start from here</string>
+    <string name="app_login_phone">手机号-Moblie Phone</string>
+    <string name="app_login_phone_english">Moblie Phone</string>
+    <string name="app_login_sms_code">短信验证码-SMS Code</string>
+    <string name="app_login_sms_code_english">SMS Code</string>
+    <string name="app_login_get_sms_code">获取验证码</string>
+    <string name="app_login_i_agree">我同意</string>
+    <string name="app_login_user_agreement">《星徽尊享平台用户服务协议》</string>
+    <string name="app_login_login">登录</string>
+    <string name="app_login_surplus">剩余</string>
+    <string name="app_login_sec">秒</string>
+    <string name="app_login_revalidation">重新验证</string>
+    <string name="app_login_please_check">请勾选用户协议</string>
+    <string name="app_login_check_phone">请输入正确的手机号</string>
+
+
+    <string name="app_main_tongzhi">重要通知</string>
+
+    <!--欢迎 -->
+    <string name="app_welcome_skip">跳过：</string>
+    <string name="app_welcome_miss_permission">缺少权限，可能会有部分功能无法使用</string>
+    <string name="app_welcome_batch_number">COPYRIGHT 2016-2026 C2M MEDIA</string>
+    <!--主页-->
+    <string name="app_index_out">再按一次退出程序</string>
+    <string name="app_index_token">登录过期请重新登陆</string>
+
+    <string name="app_index_phone">呼叫客服</string>
+    <string name="app_index_miss_phone">缺少权限，无法使用该功能</string>
+
+    <string name="app_index_service_01_c">接送机</string>
+    <string name="app_index_service_01_e">AIRPORT TRANSFER</string>
+    <string name="app_index_service_02_c">商务接送</string>
+    <string name="app_index_service_02_e">BUSINESS SHUTTLE</string>
+    <string name="app_index_service_03_c">商务日租</string>
+    <string name="app_index_service_03_e">BUSINESS DAILY RENTAL</string>
+    <string name="app_index_service_04_c">接送服务</string>
+    <string name="app_index_service_04_e">SHUTTLE SERVICE</string>
+    <!--消息-->
+    <string name="app_complete_information">完善信息</string>
+    <string name="app_message_detail">消息详情</string>
+    <string name="app_coupon_back">返回</string>
+    <!--选择城市页面-->
+    <string name="app_city_error">请选择城市！</string>
+    <string name="app_city_title">选择城市</string>
+    <string name="app_city_name">北京</string>
+    <string name="app_city_error_no">该城市暂无服务！</string>
+
+    <!--个人中心-->
+    <string name="app_personal_center">个人中心</string>
+    <string name="app_personal_center_order">出行订单</string>
+    <string name="app_personal_center_user_agreement">用户协议</string>
+    <string name="app_personal_center_tuichu">退出登录</string>
+    <!--拍照-->
+    <string name="app_take_photo">拍照</string>
+    <string name="app_select_album">相册选择</string>
+    <string name="app_cancel">取消</string>
+    <!--我的卡券-->
+    <string name="app_coupon_title">我的卡券</string>
+    <string name="app_coupon_out_date">已过期</string>
+    <string name="app_coupon_not_out_date">未过期</string>
+    <string name="app_coupon_card_number">卡号：</string>
+    <string name="app_coupon_rule">使用规则</string>
+    <string name="app_coupon_right">立即使用</string>
+    <string name="app_coupon_delete">删除</string>
+    <string name="app_coupon_delete_sucesss">删除成功</string>
+    <!--选择卡券-->
+    <string name="app_select_coupon_use">使用</string>
+    <!--我的信息-->
+    <string name="app_meinfo">我的信息</string>
+
+    <string name="app_meinfo_sex">性别</string>
+    <string name="app_meinfo_phone">手机号</string>
+
+
+    <string name="app_meinfo_tizhi">* 如您需要修改信息, 请致电客服热线</string>
+    <string name="app_meinf_kefu">联系客服</string>
+    <!--余额-->
+    <string name="yue">余额：</string>
+    <string name="balance_insufficient">余额不足</string>
+    <!--错误提示-->
+    <string name="app_error_message">网络接连失败！请稍后重试</string>
+    <string name="app_photo_success">上传成功</string>
+    <!--sex 男性 女性 未知-->
+    <string name="app_man">男性</string>
+    <string name="app_women">女性</string>
+    <string name="app_unkown">未知</string>
+
+    <!--订单-->
+    <string name="app_order_title">我的订单</string>
+    <string name="app_order_unpaid">待支付</string>
+    <string name="app_order_appointment_complete">预约完成</string>
+    <string name="app_order_send">派单中</string>
+    <string name="app_order_send_finish">派单完成</string>
+    <string name="app_order_completion">订单完成</string>
+    <string name="app_order_cancel">取消订单</string>
+    <string name="app_order_delete">订单已删除</string>
+
+    <string name="app_order_delete_left">删除订单</string>
+    <string name="app_order_pay">去支付</string>
+    <string name="app_order_cancel_sucess">取消成功</string>
+    <!--订单服务类型-->
+    <string name="app_order_daily_rental">日租</string>
+    <string name="app_order_business">商务</string>
+    <string name="app_order_half_day_rent">半日租</string>
+    <string name="app_order_transport_package">接送套餐</string>
+    <!--去评价-->
+    <string name="app_order_pingjia">去评价</string>
+    <!--订单列表-->
+    <string name="app_order_see_detail">查看详细</string>
+    <string name="app_order_number">订单编号: </string>
+
+    <string name="app_service_type">服务类型:  </string>
+    <string name="app_service_type_right">接机服务</string>
+
+
+    <string name="app_string_car_price">车型价格: </string>
+    <string name="app_service_car">服务车型:</string>
+    <string name="app_order_car_City">用车城市:</string>
+
+    <string name="app_airport_message">航班信息</string>
+    <string name="app_airport_guibin">贵宾信息:</string>
+    <string name="app_airport_beipin">服务及备品:</string>
+    <!--<string name="app_airport_sure">确定</string>-->
+
+
+    <string name="app_order_select_coupon">请选择卡券：</string>
+    <string name="app_order_coupon_selected">已选择卡券：</string>
+    <string name="app_order_amount_to_pay">待支付金额：</string>
+    <string name="app_order_mode_of_payment">支付方式：</string>
+    <string name="app_order_voucher">100元代金券</string>
+    <string name="app_order_confirm_payment">确认支付</string>
+    <string name="app_order_confirmation">订单确认</string>
+    <string name="app_order_wechat_pay"> 微信支付</string>
+    <string name="app_order_balance_pay"> 余额支付</string>
+    <string name="app_transfer_form_flight_number">航班号</string>
+    <!--订单状态-->
+    <string name="app_order_all">全部订单</string>
+    <string name="app_order_xiadan_time">下单时间: </string>
+    <string name="app_order_jieji_time">接机时间:</string>
+
+    <string name="app_order_status">订单状态：</string>
+
+    <!--消息中心-->
+    <string name="app_message_list">消息中心</string>
+    <string name="app_message_detail2">详情</string>
+
+    <!--填写地址-->
+    <string name="app_address_title">填写地址</string>
+    <string name="app_address_search">搜索</string>
+    <string name="app_address_sure">确定</string>
+    <string name="app_address_clear">清空历史记录</string>
+    <string name="app_address_keyword">请输入搜索关键字</string>
+
+    <!--选择卡券-->
+    <string name="app_select_coupon">选择卡券</string>
+    <!--注册完善信息-->
+
+    <string name="app_register_name">姓名-Name</string>
+    <string name="app_register_sex_man">先生-Male</string>
+    <string name="app_register_sex_woman">女生-Female</string>
+
+
+    <!--填写完整信息 提示语-->
+    <string name="app_tianxie_message">请填写完整信息</string>
+    <string name="app_address_error">请不要选择相同的地址</string>
+    <string name="app_transfer_form_type">请选择服务类型</string>
+    <string name="app_transfer_back">上一步</string>
+    <string name="app_transfer_goto">下一步</string>
+    <string name="app_transfer_hotline">HOTLINE</string>
+    <string name="app_transfer_hotline_c">服务热线</string>
+    <string name="app_transfer_hotline_number"></string>
+
+    <!--==================分割线-->
+    <string name="app_transfer_service_name">接送机服务</string>
+    <string name="app_transfer_service_introduce">迎宾、接送机的信赖选择</string>
+    <string name="app_transfer_service_price"></string>
+    <string name="app_transfer_selecter">请选择车型</string>
+    <string name="app_transfer_series"></string>
+    <string name="app_transfer_model"></string>
+    <string name="app_transfer_model_introduce">车型信息</string>
+    <string name="app_transfer_model_price">参考价</string>
+    <string name="app_transfer_model_mileage">服务里程</string>
+    <string name="app_transfer_model_number">准乘人数</string>
+    <string name="app_transfer_parameter_price"></string>
+    <string name="app_transfer_parameter_mileage"></string>
+    <string name="app_transfer_parameter_number"></string>
+    <string name="app_transfer_parameter">电动可调行政座椅</string>
+    <string name="app_transfer_time">用车时限：</string>
+    <string name="app_transfer_time_parameter"></string>
+    <string name="app_transfer_form_type_name_01">接机</string>
+    <string name="app_transfer_form_type_name_02">送机</string>
+    <string name="app_transfer_form_flight_date">起飞日期</string>
+    <string name="app_transfer_form_time">上车时间</string>
+
+
+    <string name="app_transfer_form_name">姓名</string>
+    <string name="app_transfer_form_phone">手机</string>
+    <string name="app_transfer_form_remarks">请选择备注</string>
+    <string name="app_transfer_prompt">用车小贴士</string>
+    <string name="app_transfer_prompt_content">须提前至少4小时下单。若您需要确保预约成功，请您至少提前4小时下单；如遇国家法定节假日，请您尽可能提前下单，以便我们为您安排出行服务。</string>
+    <string name="app_transfer_prompt_input">*请输入</string>
+    <string name="app_transfer_select_date">请选择日期</string>
+    <string name="app_transfer_form_place">上车地点</string>
+
+    <!--商务日租服务-->
+    <string name="app_shuttleAB_form_send_information">请填写接送信息</string>
+    <string name="app_shuttleABC_form_return_information">请填写返程信息</string>
+    <string name="app_shuttleABC_form_departure_time">出发地点</string>
+    <string name="app_shuttleABC_form_departure_information">请填写启程信息</string>
+    <string name="app_shuttleABC_service_introduce">迎宾、接送服务的信赖选择</string>
+    <string name="app_shuttleAB_service_introduce">迎宾、商务接送的信赖选择</string>
+    <string name="app_dailyRental_service_introduce">迎宾、日租的信赖选择</string>
+    <string name="app_transfer_form_destination">目的地</string>
+    <string name="app_string_set_out">上车时间(启程): </string>
+    <string name="app_string_back_tracking">上车时间(返程): </string>
+    <string name="app_order_songji_time">送机时间:</string>
+
+    <string name="app_dailyRental_form_info">填写服务信息</string>
+
+    <string name="app_order_destination">目 的 地:</string>
+    <string name="app_confirm_order_destination">目的地:</string>
+    <string name="app_string_pick_up">上车时间: </string>
+    <string name="app_order_car_site">上车地点:</string>
+
+    <string name="app_sure_cancel_order">请您确认是否要取消订单!</string>
+    <string name="app_sure_delete_order">请您确认是否要删除订单!</string>
+    <string name="app_sure_coupon_delete">是否要删除选中的卡券？</string>
+    <string name="app_sure_cancel_order_tishi">*如距出发时间不到4小时，需扣除100%费用，请您谅解!</string>
+
+    <string name="app_warm_prompt_airport_pick_up">温馨提示：接机时间应在飞机到达之前</string>
+    <string name="app_warm_prompt_airport_drop_off">温馨提示：送机时间应在飞机起飞之前</string>
+    <string name="app_pick_up_time_is_not_correct">接机时间不正确</string>
+    <string name="app_delivery_time_is_not_correct">送机时间不正确</string>
+
+    <string name="app_order_evaluate">订单评价</string>
+</resources>

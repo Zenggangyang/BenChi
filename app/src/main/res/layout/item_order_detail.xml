@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/component_black_title"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:background="@color/translucent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_marginLeft="@dimen/space_big_20"
+            android:layout_marginRight="@dimen/space_big_20"
+            android:background="@drawable/shape_white_five_corners"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/space_big_20"
+                android:layout_marginRight="@dimen/space_big_20"
+
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/space"
+                android:paddingRight="@dimen/space">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp">
+
+                    <ImageView
+                        android:id="@+id/iv_close"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+
+                        android:paddingTop="@dimen/space"
+                        android:src="@drawable/img_icon_close" />
+                </RelativeLayout>
+                <!--订单编号-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_string_order_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/space"
+                        android:paddingTop="@dimen/space"
+                        android:text="@string/app_order_number"
+                        android:textColor="@color/font_hint" />
+
+                    <TextView
+                        android:id="@+id/tv_order_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:paddingLeft="@dimen/space"
+                        android:paddingTop="@dimen/space"
+                        android:text=""
+                        android:textColor="@color/font_text" />
+                </LinearLayout>
+                <!--车辆价格-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_string_car_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/space"
+                        android:paddingTop="@dimen/space"
+                        android:text="@string/app_string_car_price"
+                        android:textColor="@color/font_hint" />
+
+                    <TextView
+                        android:id="@+id/tv_car_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:paddingLeft="@dimen/space"
+                        android:paddingTop="@dimen/space"
+                        android:text=""
+                        android:textColor="@color/font_text" />
+                </LinearLayout>
+                <!--服务类型-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_string_service_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/space"
+                        android:paddingTop="@dimen/space"
+                        android:text="@string/app_service_type"
+                        android:textColor="@color/font_hint" />
+
+                    <TextView
+                        android:id="@+id/tv_service_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:paddingLeft="@dimen/space"
+                        android:paddingTop="@dimen/space"
+                        android:text=""
+                        android:textColor="@color/font_text" />
+                </LinearLayout>
+
+                <!--商务接送-->
+                <LinearLayout
+                    android:id="@+id/ll_shuttle_aba"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+                    <!--上车时间-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+
+                            android:id="@+id/tv_string_pick_up_aba"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/space"
+                            android:paddingTop="@dimen/space"
+                            android:text="@string/app_string_pick_up"
+                            android:textColor="@color/font_hint" />
+
+                        <TextView
+
+                            android:id="@+id/tv_pick_up_aba"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:paddingLeft="@dimen/space"
+                            android:paddingTop="@dimen/space"
+                            android:text=""
+                            android:textColor="@color/font_text" />
+                    </LinearLayout>
+                    <!--用车城市-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+
+                            android:id="@+id/tv_string_car_city_aba"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/space"
+                            android:paddingTop="@dimen/space"
+                            android:text="@string/app_order_car_City"
+                            android:textColor="@color/font_hint" />
+
+                        <TextView
+
+                            android:id="@+id/tv_car_city_aba"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:paddingLeft="@dimen/space"
+                            android:paddingTop="@dimen/space"
+                            android:text=""
+                            android:textColor="@color/font_text" />
+                    </LinearLayout>
+                    <!--上车地点-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+
+                            android:id="@+id/tv_string_car_site_aba"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/space"
+                            android:paddingTop="@dimen/space"
+                            android:text="@string/app_order_car_site"
+                            android:textColor="@color/font_hint" />
+
+                        <TextView
+
+                            android:id="@+id/tv_car_site_aba"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:paddingLeft="@dimen/space"
+                            android:paddingTop="@dimen/space"
+                            android:text=""
+                            android:textColor="@color/font_text" />
+                    </LinearLayout>
+                    <!--目的地-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+
+                            android:id="@+id/tv_string_order_destination_aba"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/space"
+                            android:paddingTop="@dimen/space"
+                            android:text="@string/app_confirm_order_destination"
+                            android:textColor="@color/font_hint" />
+
+                        <TextView
+
+                            android:id="@+id/tv_order_destination_aba"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:paddingLeft="@dimen/space"
+                            android:paddingTop="@dimen/space"
+                            android:text=""
+                            android:textColor="@color/font_text" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--商务日租-->
+                <LinearLayout
+                    android:id="@+id/ll_dailt_rental"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+                    <!--上车时间-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+
+                            android:id="@+id/tv_string_pick_up_daily"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/space"
+                            android:paddingTop="@dimen/space"
+                            android:text="@string/app_string_pick_up"
+                            android:textColor="@color/font_hint" />
+
+                        <TextView
+
+                            android:id="@+id/tv_pick_up_daily"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:paddingLeft="@dimen/space"
+                            android:paddingTop="@dimen/space"
+                            android:text=""
+                            android:textColor="@color/font_text" />
+                    </LinearLayout>
+                    <!--用车城市-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+
+                            android:id="@+id/tv_string_car_city_daily"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/space"
+                            android:paddingTop="@dimen/space"
+                            android:text="@string/app_order_car_City"
+                            android:textColor="@color/font_hint" />
+
+                        <TextView
+
+                            android:id="@+id/tv_car_city_daily"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:paddingLeft="@dimen/space"
+                            android:paddingTop="@dimen/space"
+                            android:text=""
+                            android:textColor="@color/font_text" />
+                    </LinearLayout>
+                    <!--上车地点-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+
+                            android:id="@+id/tv_string_car_site_daily"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/space"
+                            android:paddingTop="@dimen/space"
+                            android:text="@string/app_order_car_site"
+                            android:textColor="@color/font_hint" />
+
+                        <TextView
+
+                            android:id="@+id/tv_car_site_daily"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:paddingLeft="@dimen/space"
+                            android:paddingTop="@dimen/space"
+                            android:text=""
+                            android:textColor="@color/font_text" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--接机服务-->
+                <LinearLayout
+                    android:id="@+id/ll_transfer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+                    <!--航班号-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+
+                            android:id="@+id/tv_string_flightnumber_transfer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/space"
+                            android:paddingTop="@dimen/space"
+                            android:text="@string/app_airport_message"
+                            android:textColor="@color/font_hint" />
+
+                        <TextView
+
+                            android:id="@+id/tv_flight_number_transfer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:paddingLeft="@dimen/space"
+                            android:paddingTop="@dimen/space"
+                            android:text=""
+                            android:textColor="@color/font_text" />
+                    </LinearLayout>
+                    <!--接机时间-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+
+                            android:id="@+id/tv_string_jieji_time_transfer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/space"
+                            android:paddingTop="@dimen/space"
+                            android:text="@string/app_order_jieji_time"
+                            android:textColor="@color/font_hint" />
+
+                        <TextView
+
+                            android:id="@+id/tv_jieji_time_transfer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:paddingLeft="@dimen/space"
+                            android:paddingTop="@dimen/space"
+                            android:text=""
+                            android:textColor="@color/font_text" />
+                    </LinearLayout>
+                    <!--目的地-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+
+                            android:id="@+id/tv_string_order_destination"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/space"
+                            android:paddingTop="@dimen/space"
+                            android:text="@string/app_confirm_order_destination"
+                            android:textColor="@color/font_hint" />
+
+                        <TextView
+
+                            android:id="@+id/tv_order_destination_transfer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:paddingLeft="@dimen/space"
+                            android:paddingTop="@dimen/space"
+                            android:text=""
+                            android:textColor="@color/font_text" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--接送套餐-->
+                <LinearLayout
+                    android:id="@+id/ll_shuttle_abc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+                    <!--上车时间 启程-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+
+                            android:id="@+id/tv_string_set_out_abc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/space"
+                            android:paddingTop="@dimen/space"
+                            android:text="@string/app_string_set_out"
+                            android:textColor="@color/font_hint" />
+
+                        <TextView
+
+                            android:id="@+id/tv_set_out_abc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:paddingLeft="@dimen/space"
+                            android:paddingTop="@dimen/space"
+                            android:text=""
+                            android:textColor="@color/font_text" />
+                    </LinearLayout>
+                    <!--用车城市-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+
+                            android:id="@+id/tv_string_car_city_abc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/space"
+                            android:paddingTop="@dimen/space"
+                            android:text="@string/app_order_car_City"
+                            android:textColor="@color/font_hint" />
+
+                        <TextView
+
+                            android:id="@+id/tv_car_city_abc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:paddingLeft="@dimen/space"
+                            android:paddingTop="@dimen/space"
+                            android:text=""
+                            android:textColor="@color/font_text" />
+                    </LinearLayout>
+                    <!--上车地点-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+
+                            android:id="@+id/tv_string_car_site_abc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/space"
+                            android:paddingTop="@dimen/space"
+                            android:text="@string/app_order_car_site"
+                            android:textColor="@color/font_hint" />
+
+                        <TextView
+
+                            android:id="@+id/tv_car_site_abc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:paddingLeft="@dimen/space"
+                            android:paddingTop="@dimen/space"
+                            android:text=""
+                            android:textColor="@color/font_text" />
+                    </LinearLayout>
+
+                    <!--目的地-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+
+                            android:id="@+id/tv_string_order_destination_abc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/space"
+                            android:paddingTop="@dimen/space"
+                            android:text="@string/app_confirm_order_destination"
+                            android:textColor="@color/font_hint" />
+
+                        <TextView
+
+                            android:id="@+id/tv_order_destination_abc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:paddingLeft="@dimen/space"
+                            android:paddingTop="@dimen/space"
+                            android:text=""
+                            android:textColor="@color/font_text" />
+                    </LinearLayout>
+
+                    <!--上车时间 返程-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+
+                            android:id="@+id/tv_string_back_tracking_abc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/space"
+                            android:paddingTop="@dimen/space"
+                            android:text="@string/app_string_back_tracking"
+                            android:textColor="@color/font_hint" />
+
+                        <TextView
+
+                            android:id="@+id/tv_back_tracking_abc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:paddingLeft="@dimen/space"
+                            android:paddingTop="@dimen/space"
+                            android:text=""
+                            android:textColor="@color/font_text" />
+                    </LinearLayout>
+
+                    <!--返程 目的地-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+
+                            android:id="@+id/tv_string_back_order_destination_abc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/space"
+                            android:paddingTop="@dimen/space"
+                            android:text="@string/app_confirm_order_destination"
+                            android:textColor="@color/font_hint" />
+
+                        <TextView
+
+                            android:id="@+id/tv_back_order_destination_abc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:paddingLeft="@dimen/space"
+                            android:paddingTop="@dimen/space"
+                            android:text=""
+                            android:textColor="@color/font_text" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+
+
+                <!--服务车型-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_string_service_Car"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/space"
+                        android:paddingTop="@dimen/space"
+                        android:text="@string/app_service_car"
+                        android:textColor="@color/font_hint" />
+
+                    <TextView
+                        android:id="@+id/tv_car_service_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:paddingLeft="@dimen/space"
+                        android:paddingTop="@dimen/space"
+                        android:text=""
+                        android:textColor="@color/font_text" />
+                </LinearLayout>
+                <!--贵宾信息-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_string_guest_message"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/space"
+                        android:paddingTop="@dimen/space"
+                        android:text="@string/app_airport_guibin"
+                        android:textColor="@color/font_hint" />
+
+                    <TextView
+                        android:id="@+id/tv_customer_message"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:paddingLeft="@dimen/space"
+                        android:paddingTop="@dimen/space"
+                        android:text=""
+                        android:textColor="@color/font_text" />
+                </LinearLayout>
+                <!--服务以及备品-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_string_airpory_beipin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/space"
+                        android:paddingTop="@dimen/space"
+                        android:text="@string/app_airport_beipin"
+                        android:textColor="@color/font_hint" />
+
+                    <TextView
+                        android:id="@+id/tv_service_spare"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+
+                        android:paddingLeft="@dimen/space"
+                        android:paddingTop="@dimen/space"
+                        android:text=""
+                        android:textColor="@color/font_text" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_order_sure"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp"
+                    android:layout_marginLeft="@dimen/space"
+                    android:layout_marginRight="@dimen/space"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/shape_theme_stroke_five"
+                    android:gravity="center"
+                    android:padding="@dimen/space"
+                    android:paddingBottom="@dimen/space"
+                    android:paddingTop="@dimen/space"
+                    android:text="@string/app_address_sure"
+                    android:textColor="@color/theme_color"
+                    android:textSize="@dimen/font_small" />
+
+
+            </LinearLayout>
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="18">-->
+
+            <!--</LinearLayout>-->
+        </LinearLayout>
+        <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:text="订单编号：JJ231J231231"-->
+        <!--android:layout_height="wrap_content" />-->
+    </LinearLayout>
+</LinearLayout>
