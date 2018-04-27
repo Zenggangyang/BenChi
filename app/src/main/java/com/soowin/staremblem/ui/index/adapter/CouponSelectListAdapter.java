@@ -64,19 +64,20 @@ public class CouponSelectListAdapter extends BaseRecyclerViewAdapter<CouponListB
     public void setChecked(String popops) {
         this.CardNo = popops;
     }
+
     @SuppressLint("SetJavaScriptEnabled")
     @Override
     protected void bindData(final BaseViewHolder holder, final int position, CouponListBean.DataBean dataBean) {
         holder.setIsRecyclable(false);
-        holder.findViewById(R.id.fl_logo).setLayoutParams(new RelativeLayout.LayoutParams(width,  width * 37 / 63));
-        holder.findViewById(R.id.wv_coupon).setLayoutParams(new FrameLayout.LayoutParams(width,  width * 37 / 63));
+        holder.findViewById(R.id.fl_logo).setLayoutParams(new RelativeLayout.LayoutParams(width, width * 37 / 63));
+        holder.findViewById(R.id.wv_coupon).setLayoutParams(new FrameLayout.LayoutParams(width, width * 37 / 63));
 /*        holder.findViewById(R.id.fl_logo).setLayoutParams(new RelativeLayout.LayoutParams(width, width * 37 / 63));
         holder.findViewById(R.id.wv_coupon).setLayoutParams(new FrameLayout.LayoutParams(width, width * 37 / 63));
         holder.findViewById(R.id.iv_view_alpha).setLayoutParams(new FrameLayout.LayoutParams(width, width * 37 / 63));*/
         final WebView webView = holder.findViewById(R.id.wv_coupon);
         final TextView tvCardNumber = holder.findViewById(R.id.tv_card_number);
-        TextView tvRight=holder.findViewById(R.id.tv_right);
-        tvRight.setText(PublicApplication.resourceText.getString("app_select_coupon_use", context.getResources().getString(R.string.app_select_coupon_use)) );
+        TextView tvRight = holder.findViewById(R.id.tv_right);
+        tvRight.setText(PublicApplication.resourceText.getString("app_select_coupon_use", context.getResources().getString(R.string.app_select_coupon_use)));
 
         webView.getSettings().setJavaScriptEnabled(true);
         webView.requestFocus();
@@ -119,32 +120,48 @@ public class CouponSelectListAdapter extends BaseRecyclerViewAdapter<CouponListB
                 @Override
                 public void onClick(View view) {
                     mSelectArray.clear();
-                    mSelectArray.put(position, cbOrderCheck.isChecked());
+                    if(cbOrderCheck.isChecked())
+                    {
+                        Log.e(TAG, "onClick: true" );
+                        mSelectArray.put(position, true);
+                    }else
+                    {
+                        Log.e(TAG, "onClick: false" );
+                        mSelectArray.put(position, true);
+                    }
+
                     CardNo = "";
                     notifyDataSetChanged();
                     if (cbOrderCheck.isChecked()) {
                         getPosition = position;
-                    } else {
-                        getPosition = -1;
                     }
+                   /* else {
+                        getPosition = -1;
+                    }*/
                 }
             });
             if (!CardNo.equals(dataBean.getCardNo())) {
                 cbOrderCheck.setChecked(mSelectArray.get(position, false));
-
             }
         } else {
             holder.findViewById(R.id.cb_checked).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     mSelectArray.clear();
-                    mSelectArray.put(position, cbOrderCheck.isChecked());
+                    if(cbOrderCheck.isChecked())
+                    {
+                        mSelectArray.put(position, true);
+                    }else
+                    {
+                        mSelectArray.put(position, true);
+                    }
                     notifyDataSetChanged();
                     if (cbOrderCheck.isChecked()) {
                         getPosition = position;
-                    } else {
-                        getPosition = -1;
                     }
+                   /* else {
+                        getPosition = -1;
+                    }*/
                 }
             });
             cbOrderCheck.setChecked(mSelectArray.get(position, false));
@@ -153,14 +170,17 @@ public class CouponSelectListAdapter extends BaseRecyclerViewAdapter<CouponListB
         ProgressBar mProgressBar = holder.findViewById(R.id.pb_progress);
         webView.setWebChromeClient(new WebChromeClient(mProgressBar));
     }
+
     /**
      * 进度条状态修改
      */
     public class WebChromeClient extends android.webkit.WebChromeClient {
         private ProgressBar mProgress;
-        public WebChromeClient(ProgressBar mProgressBar){
+
+        public WebChromeClient(ProgressBar mProgressBar) {
             mProgress = mProgressBar;
         }
+
         @Override
         public void onProgressChanged(WebView view, int newProgress) {
             if (newProgress == 100) {
@@ -172,6 +192,7 @@ public class CouponSelectListAdapter extends BaseRecyclerViewAdapter<CouponListB
             super.onProgressChanged(view, newProgress);
         }
     }
+
     @Override
     protected void onItemClickListener(View itemView, int position, CouponListBean.DataBean dataBean) {
 

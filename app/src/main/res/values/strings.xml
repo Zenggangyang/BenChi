@@ -27,7 +27,7 @@
     <string name="app_main_tongzhi">重要通知</string>
 
     <!--欢迎 -->
-    <string name="app_welcome_skip">跳过：</string>
+    <string name="app_welcome_skip">跳过:</string>
     <string name="app_welcome_miss_permission">缺少权限，可能会有部分功能无法使用</string>
     <string name="app_welcome_batch_number">COPYRIGHT 2016-2026 C2M MEDIA</string>
     <!--主页-->

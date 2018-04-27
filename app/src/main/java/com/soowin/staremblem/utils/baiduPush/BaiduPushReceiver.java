@@ -1,6 +1,7 @@
 package com.soowin.staremblem.utils.baiduPush;
 
 import android.content.Context;
+import android.util.Log;
 
 import com.baidu.android.pushservice.PushMessageReceiver;
 import com.soowin.staremblem.utils.PublicApplication;
@@ -17,7 +18,7 @@ public class BaiduPushReceiver extends PushMessageReceiver {
     public void onBind(Context context, int errorCode, String appid, String userId, String channelId, String requestId) {
 // 2018/3/13 0013 定向推送 将channelId上传到服务器绑定
         PublicApplication.loginInfo.edit().putString("channelId", channelId).apply();
-//        Log.e(TAG, "onBind: errorCode=" + errorCode + "-appid=" + appid + "-userId=" + userId + "-channelId=" + channelId + "-requestId=" + requestId);
+        Log.e(TAG, "onBind: errorCode=" + errorCode + "-appid=" + appid + "-userId=" + userId + "-channelId=" + channelId + "-requestId=" + requestId);
     }
 
     @Override

@@ -10,27 +10,30 @@
         android:visibility="invisible" />
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:id="@+id/ll_Content"
 
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
         android:layout_gravity="center"
+        android:layout_weight="1"
         android:background="@color/translucent"
         android:gravity="center"
         android:orientation="vertical">
 
         <LinearLayout
+            android:id="@+id/ll_little_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/space_big_20"
             android:layout_marginRight="@dimen/space_big_20"
             android:background="@drawable/shape_white_five_corners"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/space_big_20"
-                android:layout_marginRight="@dimen/space_big_20"
+
 
                 android:background="@color/white"
                 android:orientation="vertical"
@@ -45,8 +48,8 @@
 
                     <ImageView
                         android:id="@+id/iv_close"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
                         android:layout_alignParentRight="true"
 
                         android:paddingTop="@dimen/space"
@@ -615,9 +618,6 @@
                             android:textColor="@color/font_text" />
                     </LinearLayout>
                 </LinearLayout>
-
-
-
 
 
                 <!--服务车型-->

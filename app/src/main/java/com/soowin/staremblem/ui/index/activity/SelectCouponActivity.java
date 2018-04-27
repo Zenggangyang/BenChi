@@ -219,12 +219,13 @@ public class SelectCouponActivity extends BaseActivity implements View.OnClickLi
                     setResult(0, intent);
                     intent.putExtra("CouponData", (Serializable) dataBean);
                     intent.putExtra("popos", data1.get(position).getCardNo());
+                    finish();
                 } else {
                     /*没有选中 点击了确认  postion标记位为-1*/
                     setResult(0, intent);
                     intent.putExtra("popos", "");
                 }
-                finish();
+
                 break;
 
         }

@@ -14,6 +14,7 @@ import android.os.Handler;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -101,6 +102,7 @@ public class CouponListActivity extends BaseActivity implements View.OnClickList
     private PopupWindow mPopupWindowRule;
     private String OrderId = "";
     private PopupWindow mPopupWindow;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -142,8 +144,7 @@ public class CouponListActivity extends BaseActivity implements View.OnClickList
                 displaypage = 1;
                 getData(displaypage);
             }
-            if(noOutDate.size()==0)
-            {
+            if (noOutDate.size() == 0) {
                 showToast("暂无数据", 3);
             }
         } else {
@@ -161,7 +162,6 @@ public class CouponListActivity extends BaseActivity implements View.OnClickList
         View contentView = LayoutInflater.from(this).inflate(R.layout.item_coupon_rule, null);
         mPopupWindowRule = new PopupWindow(contentView, LinearLayout.LayoutParams.MATCH_PARENT,
                 LinearLayout.LayoutParams.MATCH_PARENT, true);
-
 
 
         final WebView webView = contentView.findViewById(R.id.wv_coupon_rule);
@@ -195,7 +195,7 @@ public class CouponListActivity extends BaseActivity implements View.OnClickList
         //映射.可以调用js里面的方法
         webView.addJavascriptInterface(new JavaScriptInterface(), "jsi");
 
-        ProgressBar mProgressBar =   contentView.findViewById(R.id.pb_progress);
+        ProgressBar mProgressBar = contentView.findViewById(R.id.pb_progress);
         webView.setWebChromeClient(new WebChromeClient(mProgressBar));
 
         mPopupWindowRule.setTouchable(true);
@@ -214,14 +214,17 @@ public class CouponListActivity extends BaseActivity implements View.OnClickList
         mPopupWindowRule.showAtLocation(rootview, Gravity.CENTER, 0, 0);
 
     }
+
     /**
      * 进度条状态修改
      */
     public class WebChromeClient extends android.webkit.WebChromeClient {
         private ProgressBar mProgress;
-        public WebChromeClient(ProgressBar mProgressBar){
+
+        public WebChromeClient(ProgressBar mProgressBar) {
             mProgress = mProgressBar;
         }
+
         @Override
         public void onProgressChanged(WebView view, int newProgress) {
             if (newProgress == 100) {
@@ -299,7 +302,7 @@ public class CouponListActivity extends BaseActivity implements View.OnClickList
         ivBack = findViewById(R.id.iv_back);
         ivBack.setOnClickListener(this);
         Glide.with(this)
-                .load(PublicApplication.resourceText.getString("img_go_back",""))
+                .load(PublicApplication.resourceText.getString("img_go_back", ""))
                 .asBitmap()
                 .placeholder(getResources().getDrawable(R.drawable.img_go_back))
                 .error(getResources().getDrawable(R.drawable.img_go_back))
@@ -318,7 +321,7 @@ public class CouponListActivity extends BaseActivity implements View.OnClickList
                 couponListAdapter.setData(noOutDate);
                 couponListAdapter.setType("0");
                 couponListAdapter.notifyDataSetChanged();
-                if(noOutDate!=null) {
+                if (noOutDate != null) {
                     if (noOutDate.size() <= 0)
                         showToast("暂无数据", 3);
                 }
@@ -332,7 +335,7 @@ public class CouponListActivity extends BaseActivity implements View.OnClickList
                 tvOutDate.setTextColor(getResources().getColor(R.color.theme_color));
                 couponListAdapter.setType("1");
                 couponListAdapter.notifyDataSetChanged();
-                if(OutDate!=null) {
+                if (OutDate != null) {
                     if (OutDate.size() <= 0)
                         showToast("暂无数据", 3);
                 }
@@ -401,7 +404,7 @@ public class CouponListActivity extends BaseActivity implements View.OnClickList
                                 }
                                 break;
                             case 500:
-                                showToast(data.get_metadata().getMessage(),3);
+                                showToast(data.get_metadata().getMessage(), 3);
                                 break;
                         }
                     }
@@ -447,7 +450,7 @@ public class CouponListActivity extends BaseActivity implements View.OnClickList
         });
         contentView.findViewById(R.id.ll_frame).setOnClickListener(this);
 
-        TextView tvDeleteOrder=contentView.findViewById(R.id.tv_sure_cancel_order);
+        TextView tvDeleteOrder = contentView.findViewById(R.id.tv_sure_cancel_order);
         tvDeleteOrder.setText(PublicApplication.resourceText.getString("app_sure_coupon_delete", getResources().getString(R.string.app_sure_coupon_delete)));
         mPopupWindow.setTouchable(true);
         //如果不设置popupwindow的背景，无论是点击外部还是Back都无法dismiss弹框
@@ -507,9 +510,21 @@ public class CouponListActivity extends BaseActivity implements View.OnClickList
 
                                 showToast(getResources().getString(R.string.app_coupon_delete_sucesss), 1);
                                 mPopupWindow.dismiss();
+//                                tvOutDate
+                                Log.e(TAG, "onNext: " + OutDate.size());
+                                for (int i = 0; i < OutDate.size(); i++) {
+                                    if (cardNo.equals(OutDate.get(i).getCardNo())) {
+                                        OutDate.remove(i);
+                                        couponListAdapter.setData(OutDate);
+                                        Log.e(TAG, "onNext: " + OutDate.size());
+                                        tvOutDate.setText(PublicApplication.resourceText.getString("app_coupon_out_date", getResources().getString(R.string.app_coupon_out_date)) + "(" + OutDate.size() + ")");
+
+                                        couponListAdapter.notifyDataSetChanged();
+                                    }
+                                }
                                 break;
                             case 500:
-                                showToast(data.get_metadata().getMessage(),3);
+                                showToast(data.get_metadata().getMessage(), 3);
                                 break;
                         }
                     }

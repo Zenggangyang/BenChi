@@ -159,6 +159,7 @@ public class OrderListActivity extends BaseActivity implements View.OnClickListe
                 cancelOrder(OrderId);
             }
         });
+
         /*取消*/
         contentView.findViewById(R.id.tv_cancel).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -289,6 +290,10 @@ public class OrderListActivity extends BaseActivity implements View.OnClickListe
                                 CustomToast.showSuccessToast(OrderListActivity.this, getResources().getString(R.string.app_coupon_delete_sucesss));
                                 mDeletePopUpWindow.dismiss();
                                 break;
+                            case 500:
+                                showToast(baseBean.get_metadata().getMessage(),3);
+
+                                break;
                         }
                     }
 
@@ -328,6 +333,13 @@ public class OrderListActivity extends BaseActivity implements View.OnClickListe
                 mPopupWindow.dismiss();
             }
         });
+        contentView.findViewById(R.id.ll_Content).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mPopupWindow.dismiss();
+            }
+        });
+        contentView.findViewById(R.id.ll_little_content).setOnClickListener(null);
         showStatisDisplay();
         TextView tvOrderNo = contentView.findViewById(R.id.tv_order_number);//订单编号
         TextView tvCarPrice = contentView.findViewById(R.id.tv_car_price);//车型价格

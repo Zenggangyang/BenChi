@@ -3,6 +3,8 @@ package com.soowin.staremblem.ui.index.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
+import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -137,7 +139,6 @@ public class MessageActivity extends BaseActivity implements View.OnClickListene
             LinearLayout.LayoutParams valueParams = new LinearLayout.LayoutParams(
                     0,
                     ViewGroup.LayoutParams.WRAP_CONTENT, 5);
-
             MyTextView tvValue = new MyTextView(this);
             tvValue.setLayoutParams(valueParams);
             tvValue.setText(Html.fromHtml(value));
@@ -230,6 +231,11 @@ public class MessageActivity extends BaseActivity implements View.OnClickListene
                         switch (baseBean.get_metadata().getCode()) {
                             case 200:
                                 break;
+                           
+                          /*  case 500:
+
+                                showToast(baseBean.get_metadata().getMessage(),3);
+                                break;*/
                         }
                     }
 

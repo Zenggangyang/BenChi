@@ -980,6 +980,11 @@ public class TransferActivity extends BaseActivity implements View.OnClickListen
                                         setViewData(typeData1, 0);
                                     }
                                     break;
+                                case 500:
+
+                                    CustomToast.showFailYellowToast(TransferActivity.this, data.get_metadata().getMessage());
+
+                                    break;
                             }
                         }
 

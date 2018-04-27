@@ -22,8 +22,6 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /**
  * Created by hongfu on 2018/3/22.
@@ -33,10 +31,9 @@ import java.util.regex.Pattern;
 
 public class OrderListAdapter extends BaseRecyclerViewAdapter<OrderListBean.DataBean> {
     private static final String TAG = OrderListAdapter.class.getSimpleName();
+    List<OrderListBean.DataBean> OrderData = new ArrayList<>();
     private Context context;
     private OrderListActivity orderListActivity;
-
-    List<OrderListBean.DataBean> OrderData = new ArrayList<>();
 
     public OrderListAdapter(Context context, OrderListActivity orderListActivity) {
         super(context);
@@ -243,12 +240,20 @@ public class OrderListAdapter extends BaseRecyclerViewAdapter<OrderListBean.Data
                 llOrderStatusOne.setVisibility(View.GONE);
                 llOrderStatusTwo.setVisibility(View.VISIBLE);
                 tvStatus.setText(context.getResources().getString(R.string.app_order_completion));
-                tvOrderCancel.setText(context.getResources().getString(R.string.app_order_pingjia));
+                if (OrderData.get(position).isValidateOrderEvaluation()) {
+                    tvOrderCancel.setVisibility(View.GONE);
+                } else {
+                    tvOrderCancel.setVisibility(View.VISIBLE);
+                    tvOrderCancel.setText(context.getResources().getString(R.string.app_order_pingjia));
+                }
+//                tvOrderCancel.setText(context.getResources().getString(R.string.app_order_pingjia));
                   /*去评价*/
                 tvOrderCancel.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        orderListActivity.gotoServiceEvaluation(String.valueOf(dataBean.getApiOrderID()));
+                        if (!OrderData.get(position).isValidateOrderEvaluation()) {
+                            orderListActivity.gotoServiceEvaluation(String.valueOf(dataBean.getApiOrderID()));
+                        }
                     }
                 });
                 break;

@@ -146,6 +146,7 @@
             </intent-filter>
         </service>
 
+
         <!-- 4.4版本新增的CommandService声明，提升小米和魅族手机上的实际推送到达率 -->
         <service
             android:name="com.baidu.android.pushservice.CommandService"

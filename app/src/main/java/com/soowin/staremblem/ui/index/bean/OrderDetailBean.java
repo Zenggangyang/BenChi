@@ -12,12 +12,11 @@ public class OrderDetailBean extends BaseBean {
 
 
     /**
-     * data : {"CarProduct":{"OrderId":0,"DriverID":null,"ServiceType":5,"DriverTel":null,"CardNo":"REQWU63S","CardValue":479,"listGrantAuthorize":null,"listDriver":null,"IsVIP":0,"ProductID":"740","ServiceCar":"E级","CarBrand":"梅赛德斯-奔驰","Price":480,"CarModelID":"39","FlightNumber":null,"CarCity":"北京","CarCityThree":"PEK","ArrPortCode":null,"StartPlace":"北京医院","Destination":"天安门","ReturnTimeBoard":null,"ReturnStartPlace":null,"ReturnDestination":null,"TimeBoard":"2018-10-25 19:29","PassengerName":"测试啊啦啦啦测试数据","PassengerMobile":"15532650303","Remark":"需英文客服;需英文司机;行李多需上门;需要女司机;","Driver":null,"PaymentType":"","Address":null,"CarTypeID":113,"OrderSource":2,"CarType":4},"CardDesc":"内部代金卡","HavePayMoney":480,"OrderStatusDesc":"待支付","ServiceBeginTimeSpan":4395.976834791666,"validateDriverEvaluation":false,"listGrantAuthorize":null,"OrderId":9931,"UserID":7708,"OrderCode":"1524641413129","ProductID":5,"CreateTime":"2018-04-25T15:30:13.13","RegionId":0,"ShipAddress":null,"ShipZipCode":null,"ShipName":null,"ShipCellPhone":null,"PaymentTypeName":"微信支付","PaymentStatus":0,"Freight":0,"OrderTotal":480,"OrderStatus":0,"OrderProductInfo":"{\"OrderId\":0,\"DriverID\":null,\"ServiceType\":5,\"DriverTel\":null,\"CardNo\":\"REQWU63S\",\"CardValue\":479.0,\"listGrantAuthorize\":null,\"listDriver\":null,\"IsVIP\":0,\"ProductID\":\"740\",\"ServiceCar\":\"E级\",\"CarBrand\":\"梅赛德斯-奔驰\",\"Price\":480.00,\"CarModelID\":\"39\",\"FlightNumber\":null,\"CarCity\":\"北京\",\"CarCityThree\":\"PEK\",\"ArrPortCode\":null,\"StartPlace\":\"北京医院\",\"Destination\":\"天安门\",\"ReturnTimeBoard\":null,\"ReturnStartPlace\":null,\"ReturnDestination\":null,\"TimeBoard\":\"2018-10-25 19:29\",\"PassengerName\":\"测试啊啦啦啦测试数据\",\"PassengerMobile\":\"15532650303\",\"Remark\":\"需英文客服;需英文司机;行李多需上门;需要女司机;\",\"Driver\":null,\"PaymentType\":\"\",\"Address\":null,\"CarTypeID\":113,\"OrderSource\":2,\"CarType\":4}","Remark":null,"GrantAuthorizeMobile":null,"GrantAuthorizeUserID":0,"PaymentTime":"2018-04-25T15:30:13.13","OrderUpdateTime":"2018-04-25T15:30:13.13","OrderType":1,"ProductType":null,"Province":null,"City":null,"Area":null,"OrderSerialNumber":"5007399440900392469","ProductDescription":"E级","ApiOrderID":null,"DriftMoney":0,"DriftReason":null,"ReimburseMoney":0,"ReimburseReason":null,"OrderFlightInfo":"{\"TimeOverPrice\":0.0,\"MileagesOverPrice\":0.0,\"Minutes\":0,\"Mileages\":2,\"TimeOver\":0,\"MileagesOver\":0,\"FromLongitude\":\"116.421484\",\"FromLatitude\":\"39.909989\",\"ToLongitude\":\"116.403963\",\"ToLatitude\":\"39.915119\",\"ServicePrice\":200,\"ServiceOpen\":0,\"OrderId\":0,\"DriverID\":null,\"ServiceType\":0,\"DriverTel\":null,\"CardNo\":null,\"CardValue\":0.0,\"listGrantAuthorize\":null,\"listDriver\":null,\"IsVIP\":0,\"ProductID\":null,\"ServiceCar\":null,\"CarBrand\":null,\"Price\":0.0,\"CarModelID\":null,\"FlightNumber\":null,\"CarCity\":null,\"CarCityThree\":null,\"ArrPortCode\":null,\"StartPlace\":null,\"Destination\":null,\"ReturnTimeBoard\":null,\"ReturnStartPlace\":null,\"ReturnDestination\":null,\"TimeBoard\":null,\"PassengerName\":null,\"PassengerMobile\":null,\"Remark\":null,\"Driver\":null,\"PaymentType\":null,\"Address\":null,\"CarTypeID\":0,\"OrderSource\":0,\"CarType\":0}","PriceDetail":null,"OrderMessage":null,"OrderSource":2}
+     * data : {"CarProduct":{"OrderId":0,"DriverID":null,"ServiceType":5,"DriverTel":null,"CardNo":"679FMS84","CardValue":479,"listGrantAuthorize":null,"listDriver":null,"IsVIP":0,"ProductID":"740","ServiceCar":"E级","CarBrand":"梅赛德斯-奔驰","Price":480,"CarModelID":"39","FlightNumber":null,"CarCity":"北京","CarCityThree":"PEK","ArrPortCode":null,"StartPlace":"北京饭店","Destination":"天安门-公交车站","ReturnTimeBoard":null,"ReturnStartPlace":null,"ReturnDestination":null,"TimeBoard":"2018-08-27 15:17","PassengerName":"测试啦啦啦啦测试数据","PassengerMobile":"15532650303","Remark":"需英文客服;需英文司机;行李多需上门;需要女司机;","Driver":null,"PaymentType":"","Address":null,"CarTypeID":113,"OrderSource":2,"CarType":4},"CardDesc":"内部代金卡","HavePayMoney":480,"OrderStatusDesc":"待支付","ServiceBeginTimeSpan":2931.3201160416666,"validateDriverEvaluation":false,"validateOrderEvaluation":false,"listGrantAuthorize":null,"OrderId":10066,"UserID":7708,"OrderCode":"1524799047051","ProductID":5,"CreateTime":"2018-04-27T11:17:27.05","RegionId":0,"ShipAddress":null,"ShipZipCode":null,"ShipName":null,"ShipCellPhone":null,"PaymentTypeName":"微信支付","PaymentStatus":0,"Freight":0,"OrderTotal":480,"OrderStatus":0,"OrderProductInfo":"{\"OrderId\":0,\"DriverID\":null,\"ServiceType\":5,\"DriverTel\":null,\"CardNo\":\"679FMS84\",\"CardValue\":479.0,\"listGrantAuthorize\":null,\"listDriver\":null,\"IsVIP\":0,\"ProductID\":\"740\",\"ServiceCar\":\"E级\",\"CarBrand\":\"梅赛德斯-奔驰\",\"Price\":480.00,\"CarModelID\":\"39\",\"FlightNumber\":null,\"CarCity\":\"北京\",\"CarCityThree\":\"PEK\",\"ArrPortCode\":null,\"StartPlace\":\"北京饭店\",\"Destination\":\"天安门-公交车站\",\"ReturnTimeBoard\":null,\"ReturnStartPlace\":null,\"ReturnDestination\":null,\"TimeBoard\":\"2018-08-27 15:17\",\"PassengerName\":\"测试啦啦啦啦测试数据\",\"PassengerMobile\":\"15532650303\",\"Remark\":\"需英文客服;需英文司机;行李多需上门;需要女司机;\",\"Driver\":null,\"PaymentType\":\"\",\"Address\":null,\"CarTypeID\":113,\"OrderSource\":2,\"CarType\":4}","Remark":null,"GrantAuthorizeMobile":null,"GrantAuthorizeUserID":0,"PaymentTime":"2018-04-27T11:17:27.05","OrderUpdateTime":"2018-04-27T11:17:27.05","OrderType":1,"ProductType":null,"Province":null,"City":null,"Area":null,"OrderSerialNumber":"5565455127109480540","ProductDescription":"E级","ApiOrderID":null,"DriftMoney":0,"DriftReason":null,"ReimburseMoney":0,"ReimburseReason":null,"OrderFlightInfo":"{\"TimeOverPrice\":0.0,\"MileagesOverPrice\":0.0,\"Minutes\":0,\"Mileages\":1,\"TimeOver\":0,\"MileagesOver\":0,\"FromLongitude\":\"116.41577\",\"FromLatitude\":\"39.91496\",\"ToLongitude\":\"116.400102\",\"ToLatitude\":\"39.913922\",\"ServicePrice\":200,\"ServiceOpen\":0,\"OrderId\":0,\"DriverID\":null,\"ServiceType\":0,\"DriverTel\":null,\"CardNo\":null,\"CardValue\":0.0,\"listGrantAuthorize\":null,\"listDriver\":null,\"IsVIP\":0,\"ProductID\":null,\"ServiceCar\":null,\"CarBrand\":null,\"Price\":0.0,\"CarModelID\":null,\"FlightNumber\":null,\"CarCity\":null,\"CarCityThree\":null,\"ArrPortCode\":null,\"StartPlace\":null,\"Destination\":null,\"ReturnTimeBoard\":null,\"ReturnStartPlace\":null,\"ReturnDestination\":null,\"TimeBoard\":null,\"PassengerName\":null,\"PassengerMobile\":null,\"Remark\":null,\"Driver\":null,\"PaymentType\":null,\"Address\":null,\"CarTypeID\":0,\"OrderSource\":0,\"CarType\":0}","PriceDetail":null,"OrderMessage":null,"OrderSource":2}
      * _metadata : {"code":"200","message":"success"}
      */
 
     private DataBean data;
-
 
     public DataBean getData() {
         return data;
@@ -28,20 +27,22 @@ public class OrderDetailBean extends BaseBean {
     }
 
 
+
     public static class DataBean {
         /**
-         * CarProduct : {"OrderId":0,"DriverID":null,"ServiceType":5,"DriverTel":null,"CardNo":"REQWU63S","CardValue":479,"listGrantAuthorize":null,"listDriver":null,"IsVIP":0,"ProductID":"740","ServiceCar":"E级","CarBrand":"梅赛德斯-奔驰","Price":480,"CarModelID":"39","FlightNumber":null,"CarCity":"北京","CarCityThree":"PEK","ArrPortCode":null,"StartPlace":"北京医院","Destination":"天安门","ReturnTimeBoard":null,"ReturnStartPlace":null,"ReturnDestination":null,"TimeBoard":"2018-10-25 19:29","PassengerName":"测试啊啦啦啦测试数据","PassengerMobile":"15532650303","Remark":"需英文客服;需英文司机;行李多需上门;需要女司机;","Driver":null,"PaymentType":"","Address":null,"CarTypeID":113,"OrderSource":2,"CarType":4}
+         * CarProduct : {"OrderId":0,"DriverID":null,"ServiceType":5,"DriverTel":null,"CardNo":"679FMS84","CardValue":479,"listGrantAuthorize":null,"listDriver":null,"IsVIP":0,"ProductID":"740","ServiceCar":"E级","CarBrand":"梅赛德斯-奔驰","Price":480,"CarModelID":"39","FlightNumber":null,"CarCity":"北京","CarCityThree":"PEK","ArrPortCode":null,"StartPlace":"北京饭店","Destination":"天安门-公交车站","ReturnTimeBoard":null,"ReturnStartPlace":null,"ReturnDestination":null,"TimeBoard":"2018-08-27 15:17","PassengerName":"测试啦啦啦啦测试数据","PassengerMobile":"15532650303","Remark":"需英文客服;需英文司机;行李多需上门;需要女司机;","Driver":null,"PaymentType":"","Address":null,"CarTypeID":113,"OrderSource":2,"CarType":4}
          * CardDesc : 内部代金卡
          * HavePayMoney : 480.0
          * OrderStatusDesc : 待支付
-         * ServiceBeginTimeSpan : 4395.976834791666
+         * ServiceBeginTimeSpan : 2931.3201160416666
          * validateDriverEvaluation : false
+         * validateOrderEvaluation : false
          * listGrantAuthorize : null
-         * OrderId : 9931
+         * OrderId : 10066
          * UserID : 7708
-         * OrderCode : 1524641413129
+         * OrderCode : 1524799047051
          * ProductID : 5
-         * CreateTime : 2018-04-25T15:30:13.13
+         * CreateTime : 2018-04-27T11:17:27.05
          * RegionId : 0
          * ShipAddress : null
          * ShipZipCode : null
@@ -52,25 +53,25 @@ public class OrderDetailBean extends BaseBean {
          * Freight : 0.0
          * OrderTotal : 480.0
          * OrderStatus : 0
-         * OrderProductInfo : {"OrderId":0,"DriverID":null,"ServiceType":5,"DriverTel":null,"CardNo":"REQWU63S","CardValue":479.0,"listGrantAuthorize":null,"listDriver":null,"IsVIP":0,"ProductID":"740","ServiceCar":"E级","CarBrand":"梅赛德斯-奔驰","Price":480.00,"CarModelID":"39","FlightNumber":null,"CarCity":"北京","CarCityThree":"PEK","ArrPortCode":null,"StartPlace":"北京医院","Destination":"天安门","ReturnTimeBoard":null,"ReturnStartPlace":null,"ReturnDestination":null,"TimeBoard":"2018-10-25 19:29","PassengerName":"测试啊啦啦啦测试数据","PassengerMobile":"15532650303","Remark":"需英文客服;需英文司机;行李多需上门;需要女司机;","Driver":null,"PaymentType":"","Address":null,"CarTypeID":113,"OrderSource":2,"CarType":4}
+         * OrderProductInfo : {"OrderId":0,"DriverID":null,"ServiceType":5,"DriverTel":null,"CardNo":"679FMS84","CardValue":479.0,"listGrantAuthorize":null,"listDriver":null,"IsVIP":0,"ProductID":"740","ServiceCar":"E级","CarBrand":"梅赛德斯-奔驰","Price":480.00,"CarModelID":"39","FlightNumber":null,"CarCity":"北京","CarCityThree":"PEK","ArrPortCode":null,"StartPlace":"北京饭店","Destination":"天安门-公交车站","ReturnTimeBoard":null,"ReturnStartPlace":null,"ReturnDestination":null,"TimeBoard":"2018-08-27 15:17","PassengerName":"测试啦啦啦啦测试数据","PassengerMobile":"15532650303","Remark":"需英文客服;需英文司机;行李多需上门;需要女司机;","Driver":null,"PaymentType":"","Address":null,"CarTypeID":113,"OrderSource":2,"CarType":4}
          * Remark : null
          * GrantAuthorizeMobile : null
          * GrantAuthorizeUserID : 0
-         * PaymentTime : 2018-04-25T15:30:13.13
-         * OrderUpdateTime : 2018-04-25T15:30:13.13
+         * PaymentTime : 2018-04-27T11:17:27.05
+         * OrderUpdateTime : 2018-04-27T11:17:27.05
          * OrderType : 1
          * ProductType : null
          * Province : null
          * City : null
          * Area : null
-         * OrderSerialNumber : 5007399440900392469
+         * OrderSerialNumber : 5565455127109480540
          * ProductDescription : E级
          * ApiOrderID : null
          * DriftMoney : 0.0
          * DriftReason : null
          * ReimburseMoney : 0.0
          * ReimburseReason : null
-         * OrderFlightInfo : {"TimeOverPrice":0.0,"MileagesOverPrice":0.0,"Minutes":0,"Mileages":2,"TimeOver":0,"MileagesOver":0,"FromLongitude":"116.421484","FromLatitude":"39.909989","ToLongitude":"116.403963","ToLatitude":"39.915119","ServicePrice":200,"ServiceOpen":0,"OrderId":0,"DriverID":null,"ServiceType":0,"DriverTel":null,"CardNo":null,"CardValue":0.0,"listGrantAuthorize":null,"listDriver":null,"IsVIP":0,"ProductID":null,"ServiceCar":null,"CarBrand":null,"Price":0.0,"CarModelID":null,"FlightNumber":null,"CarCity":null,"CarCityThree":null,"ArrPortCode":null,"StartPlace":null,"Destination":null,"ReturnTimeBoard":null,"ReturnStartPlace":null,"ReturnDestination":null,"TimeBoard":null,"PassengerName":null,"PassengerMobile":null,"Remark":null,"Driver":null,"PaymentType":null,"Address":null,"CarTypeID":0,"OrderSource":0,"CarType":0}
+         * OrderFlightInfo : {"TimeOverPrice":0.0,"MileagesOverPrice":0.0,"Minutes":0,"Mileages":1,"TimeOver":0,"MileagesOver":0,"FromLongitude":"116.41577","FromLatitude":"39.91496","ToLongitude":"116.400102","ToLatitude":"39.913922","ServicePrice":200,"ServiceOpen":0,"OrderId":0,"DriverID":null,"ServiceType":0,"DriverTel":null,"CardNo":null,"CardValue":0.0,"listGrantAuthorize":null,"listDriver":null,"IsVIP":0,"ProductID":null,"ServiceCar":null,"CarBrand":null,"Price":0.0,"CarModelID":null,"FlightNumber":null,"CarCity":null,"CarCityThree":null,"ArrPortCode":null,"StartPlace":null,"Destination":null,"ReturnTimeBoard":null,"ReturnStartPlace":null,"ReturnDestination":null,"TimeBoard":null,"PassengerName":null,"PassengerMobile":null,"Remark":null,"Driver":null,"PaymentType":null,"Address":null,"CarTypeID":0,"OrderSource":0,"CarType":0}
          * PriceDetail : null
          * OrderMessage : null
          * OrderSource : 2
@@ -82,6 +83,7 @@ public class OrderDetailBean extends BaseBean {
         private String OrderStatusDesc;
         private double ServiceBeginTimeSpan;
         private boolean validateDriverEvaluation;
+        private boolean validateOrderEvaluation;
         private Object listGrantAuthorize;
         private int OrderId;
         private int UserID;
@@ -167,6 +169,14 @@ public class OrderDetailBean extends BaseBean {
 
         public void setValidateDriverEvaluation(boolean validateDriverEvaluation) {
             this.validateDriverEvaluation = validateDriverEvaluation;
+        }
+
+        public boolean isValidateOrderEvaluation() {
+            return validateOrderEvaluation;
+        }
+
+        public void setValidateOrderEvaluation(boolean validateOrderEvaluation) {
+            this.validateOrderEvaluation = validateOrderEvaluation;
         }
 
         public Object getListGrantAuthorize() {
@@ -479,7 +489,7 @@ public class OrderDetailBean extends BaseBean {
              * DriverID : null
              * ServiceType : 5
              * DriverTel : null
-             * CardNo : REQWU63S
+             * CardNo : 679FMS84
              * CardValue : 479.0
              * listGrantAuthorize : null
              * listDriver : null
@@ -493,13 +503,13 @@ public class OrderDetailBean extends BaseBean {
              * CarCity : 北京
              * CarCityThree : PEK
              * ArrPortCode : null
-             * StartPlace : 北京医院
-             * Destination : 天安门
+             * StartPlace : 北京饭店
+             * Destination : 天安门-公交车站
              * ReturnTimeBoard : null
              * ReturnStartPlace : null
              * ReturnDestination : null
-             * TimeBoard : 2018-10-25 19:29
-             * PassengerName : 测试啊啦啦啦测试数据
+             * TimeBoard : 2018-08-27 15:17
+             * PassengerName : 测试啦啦啦啦测试数据
              * PassengerMobile : 15532650303
              * Remark : 需英文客服;需英文司机;行李多需上门;需要女司机;
              * Driver : null
@@ -807,32 +817,6 @@ public class OrderDetailBean extends BaseBean {
             public void setCarType(int CarType) {
                 this.CarType = CarType;
             }
-        }
-    }
-
-    public static class MetadataBean {
-        /**
-         * code : 200
-         * message : success
-         */
-
-        private String code;
-        private String message;
-
-        public String getCode() {
-            return code;
-        }
-
-        public void setCode(String code) {
-            this.code = code;
-        }
-
-        public String getMessage() {
-            return message;
-        }
-
-        public void setMessage(String message) {
-            this.message = message;
         }
     }
 }

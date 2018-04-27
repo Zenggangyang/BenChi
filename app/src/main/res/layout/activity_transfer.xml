@@ -83,6 +83,10 @@
                     android:orientation="horizontal"
                     android:paddingBottom="@dimen/space_big_25">
 
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="41dp" />
+
                     <TextView
                         android:id="@+id/tv_series"
                         android:layout_width="wrap_content"
@@ -342,9 +346,9 @@
 
                 <ImageView
                     android:id="@+id/iv_car_bg"
-                    android:scaleType="fitXY"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY" />
 
                 <android.support.v4.view.ViewPager
                     android:id="@+id/vp_car"
@@ -482,9 +486,9 @@
                         android:layout_weight="1"
                         android:background="@drawable/shape_theme_noradius"
                         android:hint="@string/app_transfer_form_flight_number"
-                        android:singleLine="true"
                         android:imeOptions="actionSearch"
                         android:paddingLeft="@dimen/space_big_20"
+                        android:singleLine="true"
                         android:textColor="@color/theme_color"
                         android:textColorHint="@color/theme_color"
                         android:textSize="@dimen/font_12" />

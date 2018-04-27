@@ -45,8 +45,10 @@ public class MyTextView extends android.support.v7.widget.AppCompatTextView {
                 String w = s.substring(i, i + 1);
                 if (isEnglish(w)) {//判断是否为英文
                     ssb.setSpan(new CustomTypefaceSpan(w, PublicApplication.typefaceE), i, i + 1, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
-                } else {
+                } else if (isChinese(w)) {
                     ssb.setSpan(new CustomTypefaceSpan(w, PublicApplication.typefaceC), i, i + 1, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+                } else {
+                    ssb.setSpan(new TypefaceSpan(w), i, i + 1, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
                 }
             }
         }
@@ -62,6 +64,19 @@ public class MyTextView extends android.support.v7.widget.AppCompatTextView {
             return false;
         }
     }
+
+    public static boolean isChinese(String s) {
+        char c = s.charAt(0);
+        int i = (int) c;
+        if ((i >= 0x4e00) && (i <= 0x9fbb)) {
+            return true;
+        } else if (i >= 48 && i <= 57) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 
     public class CustomTypefaceSpan extends TypefaceSpan {
         private final Typeface newType;

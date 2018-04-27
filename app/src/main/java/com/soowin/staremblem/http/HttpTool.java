@@ -146,6 +146,10 @@ public class HttpTool {
                     .readTimeout(30, TimeUnit.SECONDS);
             SSLContext1(okHttpClient);*/// TODO: 2018/3/10 0010 添加证书后
             Log.e(TAG, "okPost: " + PublicApplication.loginInfo.getString("token", ""));
+            Log.e(TAG, "okPost: header"+"key=ft-device"+"value="+"app-ver=" + PublicApplication.loginInfo.getString("app-ver", "") +
+                    ";device=android;device-name=" + PublicApplication.loginInfo.getString("device-name", "") +
+                    ";device-id=" + PublicApplication.loginInfo.getString("device-id", "") +
+                    ";device-channelId=" + PublicApplication.loginInfo.getString("channelId", "") );
             Request request = new Request.Builder()
                     .url(url)
 //                    .addHeader("Content-Type", "application/json")
@@ -153,7 +157,7 @@ public class HttpTool {
                     .addHeader("ft-device", "app-ver=" + PublicApplication.loginInfo.getString("app-ver", "") +
                             ";device=android;device-name=" + PublicApplication.loginInfo.getString("device-name", "") +
                             ";device-id=" + PublicApplication.loginInfo.getString("device-id", "") +
-                            ";device-channelId" + PublicApplication.loginInfo.getString("channelId", ""))
+                            ";device-channelId=" + PublicApplication.loginInfo.getString("channelId", ""))
 //                    .addHeader("app-ver",PublicApplication.loginInfo.getString("app-ver", ""))
 //                    .addHeader("device","android")
 //                    .addHeader("device-id",PublicApplication.loginInfo.getString("device-id", ""))
@@ -281,6 +285,10 @@ public class HttpTool {
                     .readTimeout(30, TimeUnit.SECONDS)
                     .build();
 //            Log.e(TAG, "okGet: " + PublicApplication.loginInfo.getString("token", ""));
+            Log.e(TAG, "okGet: header"+"key=ft-device"+"value="+"app-ver=" + PublicApplication.loginInfo.getString("app-ver", "") +
+                    ";device=android;device-name=" + PublicApplication.loginInfo.getString("device-name", "") +
+                    ";device-id=" + PublicApplication.loginInfo.getString("device-id", "") +
+                    ";device-channelId=" + PublicApplication.loginInfo.getString("channelId", "") );
             Request request = new Request.Builder()
                     .url(url)
 //                    .addHeader("Content-Type", "application/json")
@@ -288,7 +296,7 @@ public class HttpTool {
                     .addHeader("ft-device", "app-ver=" + PublicApplication.loginInfo.getString("app-ver", "") +
                             ";device=android;device-name=" + PublicApplication.loginInfo.getString("device-name", "") +
                             ";device-id=" + PublicApplication.loginInfo.getString("device-id", "") +
-                            ";device-channelId" + PublicApplication.loginInfo.getString("channelId", ""))
+                            ";device-channelId=" + PublicApplication.loginInfo.getString("channelId", ""))
 //                    .addHeader("app-ver",PublicApplication.loginInfo.getString("app-ver", ""))
 //                    .addHeader("device","android")
 //                    .addHeader("device-id",PublicApplication.loginInfo.getString("device-id", ""))

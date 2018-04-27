@@ -6,12 +6,14 @@ import android.text.Spannable;
 import android.text.SpannableStringBuilder;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.text.style.TypefaceSpan;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import com.soowin.staremblem.R;
 import com.soowin.staremblem.utils.myView.EdittextCustomTypefaceSpan;
+import com.soowin.staremblem.utils.myView.MyTextView;
 
 /**
  * Created by Administrator on 2018/3/23.
@@ -56,8 +58,10 @@ public class EditTextUtils {
             String w = s.substring(i, i + 1);
             if (isEnglish(w)) {//判断是否为英文
                 ssb.setSpan(new EdittextCustomTypefaceSpan(w, PublicApplication.typefaceE), i, i + 1, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
-            } else {
+            } else if (isChinese(w)) {
                 ssb.setSpan(new EdittextCustomTypefaceSpan(w, PublicApplication.typefaceC), i, i + 1, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+            } else {
+                ssb.setSpan(new TypefaceSpan(w), i, i + 1, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
             }
         }
         switch (editChange) {
@@ -81,7 +85,17 @@ public class EditTextUtils {
             return false;
         }
     }
-
+    public static boolean isChinese(String s) {
+        char c = s.charAt(0);
+        int i = (int) c;
+        if ((i >= 0x4e00) && (i <= 0x9fbb)) {
+            return true;
+        } else if (i >= 48 && i <= 57) {
+            return true;
+        } else {
+            return false;
+        }
+    }
     /**
      * 判断EditText是否为空
      * true:有空值， false：无空值

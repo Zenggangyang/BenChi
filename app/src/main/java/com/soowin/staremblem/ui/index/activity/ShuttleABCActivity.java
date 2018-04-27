@@ -126,7 +126,7 @@ public class ShuttleABCActivity extends BaseActivity implements View.OnClickList
     private View viewName;                   //姓名
     private String CardValue;
     private String CardType;
-//
+    //
     private ImageView ivCarBg;
     private RelativeLayout rlCar;
     /*View的显示与隐藏*/
@@ -234,8 +234,9 @@ public class ShuttleABCActivity extends BaseActivity implements View.OnClickList
     private int aboardS = 0;
 
     private ImageView ivIconDownLi1, ivIconDownLi2;
-    private String CouponDate="";
+    private String CouponDate = "";
     private TagAdapter tflAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -249,7 +250,7 @@ public class ShuttleABCActivity extends BaseActivity implements View.OnClickList
             CardNo = couponData.getCardNo();
             CardValue = String.valueOf(couponData.getCardValue());
             CardType = String.valueOf(couponData.getCardType());
-            CouponDate=couponData.getValidDate();
+            CouponDate = couponData.getValidDate();
         } else {
             CardNo = "";
             CardValue = "0";
@@ -307,6 +308,11 @@ public class ShuttleABCActivity extends BaseActivity implements View.OnClickList
                                     typeData1.addAll(data.getData());
                                     setViewData(typeData1, 0);
                                 }
+                                break;
+                            case 500:
+
+                                showToast(data.get_metadata().getMessage(), 3);
+
                                 break;
                         }
                     }
@@ -561,13 +567,13 @@ public class ShuttleABCActivity extends BaseActivity implements View.OnClickList
         ivIconDownLi1 = findViewById(R.id.iv_icon_down_li1);
         ivIconDownLi2 = findViewById(R.id.iv_icon_down_li2);
         Glide.with(this)
-                .load(PublicApplication.resourceText.getString("img_icon_down_li",""))
+                .load(PublicApplication.resourceText.getString("img_icon_down_li", ""))
                 .asBitmap()
                 .placeholder(getResources().getDrawable(R.drawable.img_icon_down_li))
                 .error(getResources().getDrawable(R.drawable.img_icon_down_li))
                 .into(ivIconDownLi1);
         Glide.with(this)
-                .load(PublicApplication.resourceText.getString("img_icon_down_li",""))
+                .load(PublicApplication.resourceText.getString("img_icon_down_li", ""))
                 .asBitmap()
                 .placeholder(getResources().getDrawable(R.drawable.img_icon_down_li))
                 .error(getResources().getDrawable(R.drawable.img_icon_down_li))
@@ -592,7 +598,7 @@ public class ShuttleABCActivity extends BaseActivity implements View.OnClickList
         tvTopTitle.setText(PublicApplication.resourceText.getString("app_index_service_04_c", getResources().getString(R.string.app_index_service_04_c)));
 
         Glide.with(this)
-                .load(PublicApplication.resourceText.getString("img_go_back",""))
+                .load(PublicApplication.resourceText.getString("img_go_back", ""))
                 .asBitmap()
                 .placeholder(getResources().getDrawable(R.drawable.img_go_back))
                 .error(getResources().getDrawable(R.drawable.img_go_back))
@@ -619,22 +625,21 @@ public class ShuttleABCActivity extends BaseActivity implements View.OnClickList
                 String time2 = MyDateUtils.getTime();
                 long minTime = Long.parseLong(time2) + (4 * 60 * 60);
                 if (tvPickUpTime.getText().equals("上车时间")) {
-                    myDatePicker.showDateAndTimePickerDialog(this.wdith, 0, 0, 0, 0, 0, minTime + "",findViewById(R.id.ll_pop));
+                    myDatePicker.showDateAndTimePickerDialog(this.wdith, 0, 0, 0, 0, 0, minTime + "", findViewById(R.id.ll_pop));
                 } else {
-                    if(!StrUtils.isEmpty(CouponDate)) {
+                    if (!StrUtils.isEmpty(CouponDate)) {
                         int yearMin = Integer.valueOf(CouponDate.substring(0, 4));
                         int monthMin = Integer.valueOf(CouponDate.substring(5, 7));
                         int dayMin = Integer.valueOf(CouponDate.substring(8, 10));
                         int hourMin = Integer.valueOf(CouponDate.substring(11, 13));
                         int minuteMin = Integer.valueOf(CouponDate.substring(14, 16));
                         int minuteSecond = Integer.valueOf(CouponDate.substring(17, 19));
-                        String Str=String.valueOf(yearMin+"-"+monthMin+"-"+dayMin+" "+hourMin+":"+minuteMin+":"+minuteSecond);
+                        String Str = String.valueOf(yearMin + "-" + monthMin + "-" + dayMin + " " + hourMin + ":" + minuteMin + ":" + minuteSecond);
                         String s = MyDateUtils.dataOne1(Str);
                         long maxTime = Long.parseLong(s);
-                        myDatePicker.showDateAndTimePickerDialog(this.wdith, aboardY, aboardM, aboardD, aboardH, aboardm, minTime + "",maxTime+"",findViewById(R.id.ll_pop));
-                    }else
-                    {
-                        myDatePicker.showDateAndTimePickerDialog(this.wdith, aboardY, aboardM, aboardD, aboardH, aboardm, minTime + "",findViewById(R.id.ll_pop));
+                        myDatePicker.showDateAndTimePickerDialog(this.wdith, aboardY, aboardM, aboardD, aboardH, aboardm, minTime + "", maxTime + "", findViewById(R.id.ll_pop));
+                    } else {
+                        myDatePicker.showDateAndTimePickerDialog(this.wdith, aboardY, aboardM, aboardD, aboardH, aboardm, minTime + "", findViewById(R.id.ll_pop));
                     }
                 }
                 break;
@@ -709,7 +714,7 @@ public class ShuttleABCActivity extends BaseActivity implements View.OnClickList
         int minSecond = Integer.valueOf(RentDatePickUp.substring(17, 19));
         String time = MyDateUtils.dataOne1(RentDatePickUp);
         MyDatePicker myDatePicker = new MyDatePicker(ShuttleABCActivity.this);
-        myDatePicker.showDateAndTimePickerDialog(wdith, yearMin, monthMin, dayMin, hourMin, minuteMin, time,findViewById(R.id.ll_pop));
+        myDatePicker.showDateAndTimePickerDialog(wdith, yearMin, monthMin, dayMin, hourMin, minuteMin, time, findViewById(R.id.ll_pop));
 
     }
 
@@ -729,19 +734,19 @@ public class ShuttleABCActivity extends BaseActivity implements View.OnClickList
 
 
     private void setTflAdapter() {
-        tflAdapter = new TagAdapter<RemarksBean>(seletedRemarkItemList){
+        tflAdapter = new TagAdapter<RemarksBean>(seletedRemarkItemList) {
             @Override
             public View getView(FlowLayout parent, int position, RemarksBean o) {
-                if (position == 0){
-                    LinearLayout iv = (LinearLayout) LayoutInflater.from(ShuttleABCActivity.this).inflate( R.layout.item_tfl_iv,
-                            tflRemarks,false);
-                    return iv ;
-                }else{
+                if (position == 0) {
+                    LinearLayout iv = (LinearLayout) LayoutInflater.from(ShuttleABCActivity.this).inflate(R.layout.item_tfl_iv,
+                            tflRemarks, false);
+                    return iv;
+                } else {
                     //正常标签的布局
-                    LinearLayout tv = (LinearLayout) LayoutInflater.from(ShuttleABCActivity.this).inflate( R.layout.item_tfl_tv,
-                            tflRemarks,false);
+                    LinearLayout tv = (LinearLayout) LayoutInflater.from(ShuttleABCActivity.this).inflate(R.layout.item_tfl_tv,
+                            tflRemarks, false);
 
-                    TextView viewById =  tv.findViewById(R.id.tv_name);
+                    TextView viewById = tv.findViewById(R.id.tv_name);
                     viewById.setText(o.getContent());
                     return tv;
                 }
@@ -830,7 +835,7 @@ public class ShuttleABCActivity extends BaseActivity implements View.OnClickList
         if (requestCode == PickUpPointCode) {//上车地点
             if (data != null && resultCode == 0) {
                 getAddress = data.getStringExtra("address");
-                if (!TextUtils.isEmpty(tvDestination.getText())&& getAddress.equals(tvDestination.getText().toString())){
+                if (!TextUtils.isEmpty(tvDestination.getText()) && getAddress.equals(tvDestination.getText().toString())) {
                     showToast(getResources().getString(R.string.app_address_error), 3);
                 } else {
                     tvPickUpPoint.setText(getAddress);
@@ -840,7 +845,7 @@ public class ShuttleABCActivity extends BaseActivity implements View.OnClickList
         } else if (requestCode == DestinationCode) {//目的地  启程
             if (data != null && resultCode == 0) {
                 getAddress = data.getStringExtra("address");
-                if (!TextUtils.isEmpty(tvPickUpPoint.getText())&& getAddress.equals(tvPickUpPoint.getText().toString())){
+                if (!TextUtils.isEmpty(tvPickUpPoint.getText()) && getAddress.equals(tvPickUpPoint.getText().toString())) {
                     showToast(getResources().getString(R.string.app_address_error), 3);
                 } else {
                     tvDestination.setText(getAddress);
@@ -852,7 +857,7 @@ public class ShuttleABCActivity extends BaseActivity implements View.OnClickList
         } else if (requestCode == ReturnDestinationCode) {//目的地 返程
             if (data != null && resultCode == 0) {
                 getAddress = data.getStringExtra("address");
-                if (!TextUtils.isEmpty(tvDestination.getText())&& getAddress.equals(tvDestination.getText().toString())){
+                if (!TextUtils.isEmpty(tvDestination.getText()) && getAddress.equals(tvDestination.getText().toString())) {
                     showToast(getResources().getString(R.string.app_address_error), 3);
                 } else {
                     tvReturnDestination.setText(getAddress);
@@ -926,7 +931,7 @@ public class ShuttleABCActivity extends BaseActivity implements View.OnClickList
             viewTel.setText(PublicApplication.resourceText.getString("app_transfer_prompt_input", getResources().getString(R.string.app_transfer_prompt_input)));
             isHttp = false;
         }
-        if (!RegularUtil.checkMobile(PassengerTel)){
+        if (!RegularUtil.checkMobile(PassengerTel)) {
             llPassenger.setVisibility(View.VISIBLE);
             viewTel.setVisibility(View.VISIBLE);
             viewTel.setText(PublicApplication.resourceText.getString("app_login_check_phone", getResources().getString(R.string.app_login_check_phone)));
@@ -936,34 +941,35 @@ public class ShuttleABCActivity extends BaseActivity implements View.OnClickList
             nextStepData();
 
     }
+
     JSONObject orderString;
     JSONObject msgOrderString = new JSONObject();//性别
 
     /*对象存放代金券  次卡  活动卡*/
-    public JSONObject JsonObjectData(JSONObject JsonObject, int ProductID,int CarModelID,String CarCity,String CarCityThree,String CarBrand,String TimeBoard,String ServiceCar,String PassengerName,
-                                     String PassengerMobile,String Remark,int CarTypeID,String PaymentType,String FlightNumber,String StartPlace,String Destination,String ReturnTimeBoard,
-                                     String ReturnStartPlace,String ReturnDestination,String CardNo,String CardValue) {
+    public JSONObject JsonObjectData(JSONObject JsonObject, int ProductID, int CarModelID, String CarCity, String CarCityThree, String CarBrand, String TimeBoard, String ServiceCar, String PassengerName,
+                                     String PassengerMobile, String Remark, int CarTypeID, String PaymentType, String FlightNumber, String StartPlace, String Destination, String ReturnTimeBoard,
+                                     String ReturnStartPlace, String ReturnDestination, String CardNo, String CardValue) {
         try {
-            JsonObject.put("ProductID", ProductID+"");
-            JsonObject.put("CarModelID",CarModelID+"");
+            JsonObject.put("ProductID", ProductID + "");
+            JsonObject.put("CarModelID", CarModelID + "");
             JsonObject.put("CarCity", CarCity);
-            JsonObject.put("CarCityThree",CarCityThree);
-            JsonObject.put("CarBrand",CarBrand);
-            JsonObject.put("TimeBoard",TimeBoard);
-            JsonObject.put("ServiceCar",ServiceCar);
-            JsonObject.put("PassengerName",PassengerName);
-            JsonObject.put("PassengerMobile",PassengerMobile);
-            JsonObject.put("Remark",Remark);
-            JsonObject.put("CarTypeID",CarTypeID);
-            JsonObject.put("PaymentType",PaymentType);
-            JsonObject.put("FlightNumber",FlightNumber);
-            JsonObject.put("StartPlace",StartPlace);
-            JsonObject.put("Destination",Destination);
-            JsonObject.put("ReturnTimeBoard",ReturnTimeBoard);
-            JsonObject.put("ReturnStartPlace",ReturnStartPlace);
-            JsonObject.put("ReturnDestination",ReturnDestination);
-            JsonObject.put("CardNo",CardNo);
-            JsonObject.put("CardValue",CardValue+"");
+            JsonObject.put("CarCityThree", CarCityThree);
+            JsonObject.put("CarBrand", CarBrand);
+            JsonObject.put("TimeBoard", TimeBoard);
+            JsonObject.put("ServiceCar", ServiceCar);
+            JsonObject.put("PassengerName", PassengerName);
+            JsonObject.put("PassengerMobile", PassengerMobile);
+            JsonObject.put("Remark", Remark);
+            JsonObject.put("CarTypeID", CarTypeID);
+            JsonObject.put("PaymentType", PaymentType);
+            JsonObject.put("FlightNumber", FlightNumber);
+            JsonObject.put("StartPlace", StartPlace);
+            JsonObject.put("Destination", Destination);
+            JsonObject.put("ReturnTimeBoard", ReturnTimeBoard);
+            JsonObject.put("ReturnStartPlace", ReturnStartPlace);
+            JsonObject.put("ReturnDestination", ReturnDestination);
+            JsonObject.put("CardNo", CardNo);
+            JsonObject.put("CardValue", CardValue + "");
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -972,16 +978,16 @@ public class ShuttleABCActivity extends BaseActivity implements View.OnClickList
     }
 
     private void nextStepData() {
-        Log.e(TAG+"RentDate1",reRentDate);
-        Log.e(TAG+"RentDate2",RentDate);
+        Log.e(TAG + "RentDate1", reRentDate);
+        Log.e(TAG + "RentDate2", RentDate);
 
 
         showDialog();
         if (CardNo == null)
             CardNo = "";
         // TODO: 2018/4/19 name改为测试
-        orderString = JsonObjectData(msgOrderString,ProductID,CarModelID, createOrderData.getCityName(),CityCode,CurrentData.getCarBrand(),RentDate,CurrentData.getCarModel(),PassengerName+"测试数据",
-                PassengerTel,Remark, Integer.parseInt(CardType),"","",CarAddressFrom,CarAddressTo,reRentDate, reCarAddressFrom, reCarAddressTo,CardNo, CardValue);
+        orderString = JsonObjectData(msgOrderString, ProductID, CarModelID, createOrderData.getCityName(), CityCode, CurrentData.getCarBrand(), RentDate, CurrentData.getCarModel(), PassengerName + "测试数据",
+                PassengerTel, Remark, Integer.parseInt(CardType), "", "", CarAddressFrom, CarAddressTo, reRentDate, reCarAddressFrom, reCarAddressTo, CardNo, CardValue);
 
         Observable.create(new ObservableOnSubscribe<String>() {
             @Override
@@ -1103,7 +1109,7 @@ public class ShuttleABCActivity extends BaseActivity implements View.OnClickList
                                 PublicApplication.loginInfo.edit().putString("Balance", String.valueOf(dataBean.getBalance())).apply();
                                 PublicApplication.loginInfo.edit().putString("OpenID", String.valueOf(dataBean.getOpenID())).apply();
                                 PublicApplication.loginInfo.edit().putString("ServiceTel", String.valueOf(dataBean.getServiceTel())).apply();
-
+                                break;
                         }
                     }
 

@@ -9,6 +9,8 @@
     <!--android:layout_width="match_parent"-->
     <!--android:layout_height="match_parent">-->
     <LinearLayout
+        android:paddingTop="@dimen/space_big_20"
+        android:paddingBottom="@dimen/space_big_20"
         android:paddingLeft="@dimen/space_big_20"
         android:paddingRight="@dimen/space_big_20"
         android:layout_width="match_parent"

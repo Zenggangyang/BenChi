@@ -9,6 +9,7 @@ import android.text.Spannable;
 import android.text.SpannableStringBuilder;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.text.style.TypefaceSpan;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,6 +31,7 @@ import com.soowin.staremblem.utils.PublicApplication;
 import com.soowin.staremblem.utils.RecordSQLiteOpenHelper;
 import com.soowin.staremblem.utils.ScreenManager;
 import com.soowin.staremblem.utils.myView.EdittextCustomTypefaceSpan;
+import com.soowin.staremblem.utils.myView.MyRadioButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -88,8 +90,10 @@ public class AddressActivity extends BaseActivity implements View.OnClickListene
             String w = s.substring(i, i + 1);
             if (isEnglish(w)) {//判断是否为英文
                 ssb.setSpan(new EdittextCustomTypefaceSpan(w, PublicApplication.typefaceE), i, i + 1, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
-            } else {
+            } else if (isChinese(w)) {
                 ssb.setSpan(new EdittextCustomTypefaceSpan(w, PublicApplication.typefaceC), i, i + 1, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+            } else {
+                ssb.setSpan(new TypefaceSpan(w), i, i + 1, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
             }
         }
         switch (editChange) {
@@ -102,6 +106,17 @@ public class AddressActivity extends BaseActivity implements View.OnClickListene
                 break;
         }
 
+    }
+    public static boolean isChinese(String s) {
+        char c = s.charAt(0);
+        int i = (int) c;
+        if ((i >= 0x4e00) && (i <= 0x9fbb)) {
+            return true;
+        } else if (i >= 48 && i <= 57) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     private static boolean isEnglish(String s) {

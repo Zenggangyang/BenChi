@@ -443,6 +443,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                                 PublicApplication.loginInfo.edit().putString("OpenID", String.valueOf(dataBean.getOpenID())).apply();
                                 PublicApplication.loginInfo.edit().putString("ServiceTel", String.valueOf(dataBean.getServiceTel())).apply();
                                 break;
+                            case 500:
+
+                              showToast(data.get_metadata().getMessage(),3);
+                                break;
                         }
                     }
 

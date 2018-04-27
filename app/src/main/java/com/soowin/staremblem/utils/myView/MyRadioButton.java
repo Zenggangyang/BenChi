@@ -42,8 +42,10 @@ public class MyRadioButton extends android.support.v7.widget.AppCompatRadioButto
             String w = s.substring(i, i + 1);
             if (isEnglish(w)) {//判断是否为英文
                 ssb.setSpan(new CustomTypefaceSpan(w, PublicApplication.typefaceE), i, i + 1, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
-            } else {
+            } else if (isChinese(w)) {
                 ssb.setSpan(new CustomTypefaceSpan(w, PublicApplication.typefaceC), i, i + 1, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+            } else {
+                ssb.setSpan(new TypefaceSpan(w), i, i + 1, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
             }
         }
         super.setText(ssb, type);
@@ -53,6 +55,18 @@ public class MyRadioButton extends android.support.v7.widget.AppCompatRadioButto
         char c = s.charAt(0);
         int i = (int) c;
         if ((i >= 65 && i <= 90) || (i >= 97 && i <= 122)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public static boolean isChinese(String s) {
+        char c = s.charAt(0);
+        int i = (int) c;
+        if ((i >= 0x4e00) && (i <= 0x9fbb)) {
+            return true;
+        } else if (i >= 48 && i <= 57) {
             return true;
         } else {
             return false;

@@ -397,6 +397,7 @@ public class ShuttleABActivity extends BaseActivity implements View.OnClickListe
                                 PublicApplication.loginInfo.edit().putString("OpenID", String.valueOf(dataBean.getOpenID())).apply();
                                 PublicApplication.loginInfo.edit().putString("ServiceTel", String.valueOf(dataBean.getServiceTel())).apply();
 
+                                break;
                         }
                     }
 

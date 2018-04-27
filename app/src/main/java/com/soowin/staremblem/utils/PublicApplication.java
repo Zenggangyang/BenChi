@@ -61,7 +61,7 @@ public class PublicApplication extends Application {
      * 第三方id  TODO: 2018/3/13 0013 需客户提供apikey
      */
     public static String WEIXIN_APP_ID = "wxde139f4851f9f5b9";//微信
-    public static String BAIDU_PUSH_ID = "r2dl4VLU73O516GcSeMHtHlh";//百度推送
+    public static String BAIDU_PUSH_ID = "MWV4nGYX3iPx5gh4k5VeoBmG";//百度推送
     public static String UMENG_ID = "5a9f46d9f29d987f07000724";//友盟统计
 
     private static final String BUGLY_ID = "fdf29a3e62";
